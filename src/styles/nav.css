@@ -1,0 +1,76 @@
+nav {
+  height: 87px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100vw;
+  color: #607E82;
+}
+
+nav .left,
+nav .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .donate {
+  height: 100%;
+  background: #FF121C;
+  color: white;
+  width: 155px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .donate svg {
+  margin-left: 8px;
+}
+
+nav .language {
+  margin-left: 32px;
+}
+
+nav .links a {
+  margin-right: 28px;
+}
+
+nav .language,
+nav .links a {
+  -webkit-transition: all .15s;
+  transition: all .15s;
+}
+
+nav .language:hover,
+nav .links a:hover {
+  color: #0D1F2D;
+}
+
+nav .links a:first-child {
+  margin-right: 30px;
+}
+
+nav .logo {
+  margin: 14px 45px 24px 32px;
+}
+
+nav .separator {
+  height: 49px;
+  width: 1px;
+  margin: 19px 0;
+  background: #FF121C;
+}

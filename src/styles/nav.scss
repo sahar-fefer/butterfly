@@ -1,0 +1,63 @@
+@import './variables';
+
+nav {
+    height: 87px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    color: $regular-gray;
+
+    .left,
+    .right {
+        display: flex;
+        height: 100%;
+        align-items: center;
+
+    }
+
+    .donate {
+        height: 100%;
+        background: $red;
+        color: white;
+        width: 155px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            margin-left: 8px;
+        }
+    }
+
+    .language {
+        margin-left: 32px;
+    }
+
+    .links a {
+        margin-right: 28px;
+    }
+
+    .language,
+    .links a {
+        transition: all .15s;
+
+        &:hover {
+            color: $hard-gray;
+        }
+    }
+
+    .links a:first-child {
+        margin-right: 30px;
+    }
+
+    .logo {
+        margin: 14px 45px 24px 32px;
+    }
+
+    .separator {
+        height: 49px;
+        width: 1px;
+        margin: 19px 0;
+        background: $red;
+    }
+}

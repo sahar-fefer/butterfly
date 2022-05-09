@@ -1,0 +1,59 @@
+// colors
+$red: #FF121C;
+$light-red: #FFE7E8;
+$border-red: #FFE1E2;
+$hard-gray:#0D1F2D;
+$regular-gray:#607E82;
+$light-gray: #BBCDCF;
+$white: #ffffff;
+$black: #000000;
+
+// screen sizes
+$mobile: '375px';
+$tablet: '768px';
+$tablet-large: '1024px';
+$desktop: '1280px';
+$desktop-large: '1440px';
+
+@mixin mobile {
+    @media(max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media(max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin tablet-large {
+    @media(max-width: $tablet-large) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media(max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin desktop-large {
+    @media(max-width: $desktop-large) {
+        @content;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin absolute-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

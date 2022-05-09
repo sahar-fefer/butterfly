@@ -1,0 +1,95 @@
+.main-banner {
+  color: white;
+  position: relative;
+}
+
+.main-banner .banner {
+  width: 100%;
+  height: 590px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-banner .inner-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.main-banner h1 {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 49px;
+}
+
+.main-banner .sub-title {
+  margin: 12px 0 32px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.main-banner .ctas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-banner .ctas a {
+  width: 150px;
+  height: 54px;
+  border: 2px solid white;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-banner .ctas a:first-child {
+  margin-right: 12px;
+}
+
+.main-banner .donate {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000000;
+}
+
+.main-banner .donate:hover {
+  background: white;
+}
+
+.main-banner .volunteer {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.main-banner .volunteer:hover {
+  background: white;
+  color: black;
+}
