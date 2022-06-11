@@ -1,4 +1,5 @@
 {
+  "homepage": "https://sahar-fefer.github.io/butterfly/",
   "name": "butterfly",
   "version": "1.0.0",
   "private": true,
@@ -8,6 +9,8 @@
     "gatsby"
   ],
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -34,6 +37,7 @@
     "@types/node": "^17.0.31",
     "@types/react": "^17.0.44",
     "@types/react-dom": "^17.0.16",
+    "gh-pages": "^4.0.0",
     "typescript": "^4.6.4"
   }
 }
