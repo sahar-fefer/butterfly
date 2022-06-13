@@ -5,6 +5,7 @@ const config: GatsbyConfig = {
     title: `butterfly`,
     siteUrl: `https://www.yourdomain.tld`
   },
+  pathPrefix: "/butterfly",
   plugins: [
     "gatsby-plugin-sass", 
   //   {
