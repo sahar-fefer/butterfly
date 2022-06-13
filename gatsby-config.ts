@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `butterfly`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://sahar-fefer.github.io/butterfly/`
   },
   pathPrefix: "/butterfly",
   plugins: [
