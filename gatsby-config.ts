@@ -1,11 +1,11 @@
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
+  pathPrefix: `/butterfly`,
   siteMetadata: {
     title: `butterfly`,
     siteUrl: `https://sahar-fefer.github.io/butterfly/`
   },
-  pathPrefix: "/butterfly",
   plugins: [
     "gatsby-plugin-sass", 
   //   {
