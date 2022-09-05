@@ -8,6 +8,9 @@ $light-gray: #BBCDCF;
 $white: #ffffff;
 $black: #000000;
 
+// spaces
+$side-space: 15px;
+
 // screen sizes
 // $mobile: '375px';
 $mobile: '767px';
@@ -57,4 +60,16 @@ $desktop-large: '1440px';
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+@include tablet() {
+    $side-space: 20px;
+}
+
+@include tablet-large() {
+    $side-space: 28px;
+}
+
+@include desktop() {
+    $side-space: 0;
 }
