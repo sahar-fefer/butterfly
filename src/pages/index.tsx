@@ -1,28 +1,27 @@
 import * as React from "react"
-import Helmet from 'react-helmet'
-import favicon from '../images/favicon.png'
+import { useState } from "react"
 import MainBanner from "../components/index/mainBanner"
 import Faq from "../components/faq"
 import Nav from "../components/nav"
 import "../styles/general.scss"
 import About from "../components/index/about"
 
-interface Props {
-  favicon: any,
-  Helmet: any
-}
+//  markup
+const IndexPage = () => {
+  const [lang, setLang] = useState<string>('EN')
 
-// markup
-const IndexPage = (props: Props) => {
-  const { } = props
+  const changeLang = (e: React.MouseEvent<HTMLElement>) => {
+    if (lang === 'עב')
+      setLang('EN')
+    else
+      setLang('עב')
+  }
+  console.log(lang);
 
   return (
-    <div>
-      {/* <div dir="rtl"> */}
-      <Helmet>
-        <link rel="icon" href={favicon} />
-      </Helmet>
-      <Nav />
+    // <div>
+    <div className={`main ${lang === 'EN' ? 'heb' : 'eng'}`}>
+      <Nav lang={lang} changeLang={changeLang} />
       <MainBanner />
       <About />
       <Faq />

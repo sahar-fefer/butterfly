@@ -1,12 +1,11 @@
 .donate {
+    display: flex;
+    gap: 8px;
+
     &:hover {
         .hart {
             animation: heartbeat 1.5s infinite;
         }
-    }
-
-    .hart {
-        margin-left: 8px;
     }
 
     @keyframes heartbeat {

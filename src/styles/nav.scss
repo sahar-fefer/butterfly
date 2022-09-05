@@ -1,11 +1,25 @@
 @import './variables';
 
 nav {
-    height: 87px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     width: 100vw;
     color: $regular-gray;
+    background: #ffffff !important;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    @include tablet-large() {
+        height: 77px;
+    }
+
+    @include desktop() {
+        height: 87px;
+    }
 
     .left,
     .right {
@@ -15,26 +29,175 @@ nav {
 
     }
 
+    .burger-bar {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        margin-left: 22px;
+        margin-right: 26px;
+        transition: all .15s .2s;
+
+        .line {
+            width: 21px;
+            height: 2px;
+            background-color: #0D1F2D;
+        }
+
+        @include tablet-large() {
+            display: none;
+        }
+    }
+
+    &.open {
+        .links {
+            right: 0;
+            z-index: 11;
+        }
+
+        .background-side-nav {
+            z-index: 10;
+        }
+
+        .links,
+        .background-side-nav {
+            opacity: 1;
+            visibility: visible;
+            // transition: all .3s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+            transition: all .3s .2s;
+        }
+
+        .burger-bar {
+            gap: 5px;
+            transition: all .15s;
+        }
+    }
+
+    .background-side-nav {
+        position: fixed;
+        inset: 0;
+        opacity: 0;
+        visibility: hidden;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
     .donate {
-        height: 100%;
+        width: 102px;
+        height: 42px;
         background: $red;
         color: white;
-        width: 155px;
-        display: flex;
         justify-content: center;
         align-items: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.08em;
+        margin: 14px;
 
-        svg {
-            margin-left: 8px;
+        @include tablet-large {
+            width: 125px;
+            height: 100%;
+            font-size: 18px;
+            line-height: 24px;
+            margin: 0;
+        }
+
+        @include desktop {
+            width: 155px;
+        }
+
+        .hart {
+            width: 10px;
+            height: 9px;
+
+            @include tablet-large() {
+                width: 13px;
+                height: 12px;
+            }
         }
     }
 
     .language {
         margin-left: 32px;
+        display: none;
+
+        @include tablet-large() {
+            display: block;
+            font-size: 16px;
+            line-height: 21px;
+        }
     }
 
-    .links a {
-        margin-right: 28px;
+    .links {
+        position: fixed;
+        width: 285px;
+        background: #0D1F2D;
+        top: 0;
+        bottom: 0;
+        right: -120px;
+        opacity: 0;
+        visibility: hidden;
+        // transition: all .2s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+        transition: all .3s;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        color: #ffffff;
+        text-align: right;
+        padding-top: 48px;
+        padding-right: 55px;
+
+        * {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        a {
+            margin-bottom: 30px;
+        }
+
+        a:first-child {
+            margin-bottom: 0px;
+        }
+
+        .language {
+            width: fit-content;
+            display: block;
+        }
+
+        .donated {
+            margin-bottom: 80px;
+        }
+
+        @include tablet-large() {
+            position: static;
+            width: fit-content;
+            background: transparent;
+            opacity: 1;
+            visibility: visible;
+            display: block;
+            color: inherit;
+            padding: 0;
+
+            .language {
+                display: none;
+            }
+
+            a {
+                font-size: 16px;
+                line-height: 21px;
+                margin: 0;
+                margin-right: 28px;
+            }
+
+            a:first-child {
+                margin-right: 30px;
+            }
+
+            .donated {
+                margin-bottom: 0;
+            }
+        }
     }
 
     .language,
@@ -42,22 +205,61 @@ nav {
         transition: all .15s;
 
         &:hover {
-            color: $hard-gray;
+            opacity: .8;
+
+            @include tablet-large() {
+                color: $hard-gray;
+            }
         }
     }
 
-    .links a:first-child {
-        margin-right: 30px;
-    }
-
     .logo {
-        margin: 14px 45px 24px 32px;
+        margin: 13px 18px 19px;
+
+        @include tablet-large() {
+            margin: -5px 24px 0;
+        }
+
+        @include desktop() {
+            margin: 14px 45px 24px 32px;
+        }
+
+        & svg {
+            width: 80px;
+            height: 38px;
+
+            @include tablet-large() {
+                width: 97px;
+                height: 49px;
+            }
+        }
     }
 
     .separator {
-        height: 49px;
+        height: 40px;
         width: 1px;
-        margin: 19px 0;
+        margin: 15px 0;
         background: $red;
+
+        @include tablet-large() {
+            height: 49px;
+            margin: 19px 0;
+        }
+
+        &.left {
+            display: none;
+
+            @include tablet-large() {
+                display: block;
+            }
+        }
+
+        &.right {
+            display: block;
+
+            @include tablet-large() {
+                display: none;
+            }
+        }
     }
 }

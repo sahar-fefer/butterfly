@@ -34,6 +34,7 @@
 
     .ctas {
         display: flex;
+        gap: 12px;
 
         a {
             width: 150px;
@@ -43,10 +44,6 @@
             font-size: 16px;
             letter-spacing: 0.08em;
             @include flex-center;
-
-            &:first-child {
-                margin-right: 12px;
-            }
         }
     }
 
