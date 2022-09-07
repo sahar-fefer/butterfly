@@ -1,0 +1,115 @@
+@import './variables';
+
+footer {
+    height: 421px;
+    width: 100%;
+    background: #0D1F2D;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 50px 32px 28px;
+
+    @include tablet-large() {
+        padding: 56px $side-space 34px;
+        height: 275px;
+    }
+
+    // @include desktop() {
+    //     padding: 56px $side-space 34px;
+    //     height: 275px;
+    // }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        // align-items: center;
+
+        @include tablet-large() {
+            max-width: 1302px;
+            margin: 0 auto;
+            // justify-content: space-between;
+        }
+    }
+
+    .group-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 44px;
+
+        @include tablet-large() {
+            display: flex;
+            gap: 76px;
+        }
+
+        .group {
+            color: #FFFFFF;
+
+            &:nth-child(even) {
+                text-align: end;
+            }
+
+            * {
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+            @include tablet-large() {
+                &:nth-child(even) {
+                    text-align: start;
+                }
+
+                &:last-child {
+                    text-align: end;
+                }
+            }
+        }
+
+        .title {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        a {
+            display: block;
+            margin-top: 6px;
+            font-weight: 400;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        .group:last-child {
+            a {
+                margin-top: 11px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 11px;
+
+                &:first-child {
+                    margin-top: 1px;
+                }
+            }
+
+            @include tablet-large() {
+                margin-right: auto;
+            }
+        }
+    }
+
+    .protects {
+        color: #BBCDCF;
+        text-align: center;
+        margin-top: auto;
+
+        @include tablet-large() {
+            text-align: start;
+
+            br {
+                display: none;
+            }
+        }
+    }
+}

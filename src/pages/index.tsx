@@ -5,6 +5,7 @@ import Faq from "../components/faq"
 import Nav from "../components/nav"
 import "../styles/general.scss"
 import About from "../components/index/about"
+import Footer from "../components/footer"
 
 //  markup
 const IndexPage = () => {
@@ -25,6 +26,7 @@ const IndexPage = () => {
       <MainBanner />
       <About />
       <Faq />
+      <Footer />
     </div>
   )
 }
