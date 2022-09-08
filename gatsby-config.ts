@@ -25,11 +25,14 @@ const config: GatsbyConfig = {
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
-      name: `gatsby-starter-default`,
-      short_name: `starter`,
+      name: `butterflies are forever`,
+      short_name: `Omer's butterflies`,
+      description: `עומר נסעה לטיול הגדול, עם המון חלומות ותמימות שהכול אפשרי - עומר נהרגה בנפאל. ב-21 שנות חייה
+      הצליחה בדרכה האמיתית והמיוחדת לגעת בליבם של הרבה אנשים, היא ידעה לתת מקום לכול אדם, וכשהיא
+      הביטה בך, ידעת שהיא איתך. כדי להנציח את זכרה של עומר הקמנו שתי עמותות.`,
       start_url: `/`,
-      background_color: `#663399`,
-      theme_color: `#663399`,
+      background_color: `#FFFFFF`,
+      theme_color: `#FFFFFF`,
       display: `minimal-ui`,
       icon: `src/images/favicon.png`
     }},
@@ -37,8 +40,8 @@ const config: GatsbyConfig = {
     resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Assistant`,
-          `source sans pro\:300,400,500,700`
+          `Assistant pro\:300,400,500,700`,
+          `sans-serif pro\:300,400,500,700`
         ],
         display: 'swap'
       }}
