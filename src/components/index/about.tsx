@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "gatsby"
-import "../../styles/index/about.scss"
 import AboutButterfly from '../../images/about-butterfly.jpg'
 import AboutHouse from '../../images/about-house.jpg'
 

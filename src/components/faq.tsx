@@ -1,5 +1,4 @@
 import React from 'react'
-import "../styles/faq.scss"
 
 function Faq() {
     const faqInfo: { question: string, answer: string }[] = [

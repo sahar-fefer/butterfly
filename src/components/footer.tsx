@@ -1,12 +1,7 @@
 import React from 'react'
 import { Link } from "gatsby"
-import "../styles/footer.scss"
 
-interface Props { }
-
-function Footer(props: Props) {
-    const { } = props
-
+export default () => {
     return (
         <footer>
             <div className="wrapper">
@@ -51,5 +46,3 @@ function Footer(props: Props) {
         </footer>
     )
 }
-
-export default Footer

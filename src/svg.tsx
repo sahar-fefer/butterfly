@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/svg.scss'
+// import './styles/svg.scss'
 
 interface Props {
   color: string

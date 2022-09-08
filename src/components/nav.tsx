@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from "gatsby"
-import "../styles/nav.scss"
 import { DonateHart, Logo } from "../svg"
 
 interface Props {

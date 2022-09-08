@@ -2,7 +2,6 @@ import React from 'react'
 import { DonateHart } from "../../svg"
 import MobileBannerImg from '../../images/main-banner-m.jpg'
 import FullBannerImg from '../../images/main-banner-d.jpg'
-import "../../styles/index/main-banner.scss"
 import { Link } from 'gatsby'
 
 interface Props { }
