@@ -1,83 +1,36 @@
 @import './variables';
+@import './accordion';
 
 .faq {
-    margin: 0 auto 75px;
-    max-width: 986px;
+    padding-bottom: 40px;
+    padding: 0 $side-space 40px;
+
+    @include tablet-large() {
+        background: linear-gradient(180deg, #F7F7F7 16.62%, rgba(247, 247, 247, 0) 100%);
+        padding: 314px 0 75px;
+    }
+
+    @include desktop() {
+        padding-top: 358px;
+    }
+
+    .content-wrapper {
+        margin: 0 auto;
+        max-width: 986px;
+    }
 
     h3 {
         font-weight: 600;
-        font-size: 32px;
-        line-height: 42px;
+        font-size: 28px;
+        line-height: 37px;
         color: $hard-gray;
         text-align: center;
-        margin-bottom: 56px;
-    }
+        margin-bottom: 30px;
 
-    .dropdown {
-        padding: 20px 19px 18px 14px;
-        border-bottom: 1px solid $border-red;
-        box-sizing: border-box;
-        transition: all .2s;
-        overflow: hidden;
-        cursor: pointer;
-
-        &.active {
-            padding-top: 16px;
-            padding-bottom: 18px;
-            background: $light-red;
-            border-radius: 8px;
-            margin: 4px 0;
-
-            .answer {
-                height: 100%;
-                opacity: 1;
-            }
-
-            .strip {
-                margin-bottom: 26px;
-            }
-
-            .plus {
-                transform: rotate(90deg);
-                opacity: 0;
-            }
-        }
-
-        &:first-child {
-            border-top: 1px solid $border-red;
-        }
-
-        .plus {
-            transform: rotate(0deg);
-            transform-origin: center;
-            transition: all .2s;
-            opacity: 1;
-        }
-
-        .strip {
-            display: flex;
-            justify-content: space-between;
-            transition: all .2s;
-        }
-
-        .question {
-            color: $hard-gray;
-            max-width: 740px;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 21px;
-        }
-
-        .answer {
-            color: $regular-gray;
-            max-width: 740px;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 21px;
-            height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: all .2s;
+        @include tablet-large() {
+            margin-bottom: 56px;
+            font-size: 32px;
+            line-height: 42px;
         }
     }
 }

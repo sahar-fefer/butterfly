@@ -35,16 +35,7 @@ const config: GatsbyConfig = {
       theme_color: `#FFFFFF`,
       display: `minimal-ui`,
       icon: `src/images/favicon.png`
-    }},
-    {
-    resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Assistant pro\:300,400,500,700`,
-          `sans-serif pro\:300,400,500,700`
-        ],
-        display: 'swap'
-      }}
+    }}
   ]
 };
 

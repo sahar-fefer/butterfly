@@ -4,8 +4,12 @@
     text-align: center;
     margin: 50px 0;
 
-    @include tablet-large() {
-        margin: 80px 0;
+    @include tablet-large {
+        margin: 80px 0 -234px;
+    }
+
+    @include desktop() {
+        margin-bottom: -278px;
     }
 
     .sub-title {
