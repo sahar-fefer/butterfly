@@ -13,10 +13,9 @@ footer {
         height: 275px;
     }
 
-    // @include desktop() {
-    //     padding: 56px $side-space 34px;
-    //     height: 275px;
-    // }
+    @include desktop() {
+        padding: 56px 0 34px;
+    }
 
     .wrapper {
         display: flex;

@@ -1,4 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
+:root {
+  --side-space: 15px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --side-space: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --side-space: 28px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --side-space: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .m-to-d-l {
+    display: none;
+  }
+}
+
+.d-l-grid {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .d-l-grid {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
 html,
 body,
 div,
@@ -134,6 +173,45 @@ button {
 
 .eng {
   direction: ltr;
+}
+
+:root {
+  --side-space: 15px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --side-space: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --side-space: 28px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --side-space: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .m-to-d-l {
+    display: none;
+  }
+}
+
+.d-l-grid {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .d-l-grid {
+    display: -ms-grid;
+    display: grid;
+  }
 }
 
 nav {
@@ -515,6 +593,45 @@ nav .separator.right {
   }
 }
 
+:root {
+  --side-space: 15px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --side-space: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --side-space: 28px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --side-space: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .m-to-d-l {
+    display: none;
+  }
+}
+
+.d-l-grid {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .d-l-grid {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
 footer {
   height: 421px;
   width: 100%;
@@ -526,8 +643,14 @@ footer {
 
 @media (min-width: 1024px) {
   footer {
-    padding: 56px 15px 34px;
+    padding: 56px var(--side-space) 34px;
     height: 275px;
+  }
+}
+
+@media (min-width: 1280px) {
+  footer {
+    padding: 56px 0 34px;
   }
 }
 

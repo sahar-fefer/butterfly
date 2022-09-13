@@ -1,16 +1,3 @@
-// colors
-$red: #FF121C;
-$light-red: #FFE7E8;
-$border-red: #FFE1E2;
-$hard-gray:#0D1F2D;
-$regular-gray:#607E82;
-$light-gray: #BBCDCF;
-$white: #ffffff;
-$black: #000000;
-
-// spaces
-$side-space: 15px;
-
 // screen sizes
 // $mobile: '375px';
 $mobile: '767px';
@@ -49,6 +36,35 @@ $desktop-large: '1440px';
     }
 }
 
+:root {
+    --side-space: 15px;
+
+    @include tablet() {
+        --side-space: 20px;
+    }
+
+    @include tablet-large() {
+        --side-space: 28px;
+    }
+
+    @include desktop() {
+        --side-space: auto;
+    }
+}
+
+// spaces
+$side-space: var(--side-space);
+
+// colors
+$red: #FF121C;
+$light-red: #FFE7E8;
+$border-red: #FFE1E2;
+$hard-gray:#0D1F2D;
+$regular-gray:#607E82;
+$light-gray: #BBCDCF;
+$white: #ffffff;
+$black: #000000;
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
@@ -62,14 +78,17 @@ $desktop-large: '1440px';
     transform: translate(-50%, -50%);
 }
 
-@include tablet() {
-    $side-space: 20px;
+// sizes display
+.m-to-d-l {
+    @include tablet-large() {
+        display: none;
+    }
 }
 
-@include tablet-large() {
-    $side-space: 28px;
-}
+.d-l-grid {
+    display: none;
 
-@include desktop() {
-    $side-space: 0;
+    @include tablet-large() {
+        display: grid;
+    }
 }

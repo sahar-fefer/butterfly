@@ -1,18 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Head } from '../pages';
 import "../styles/styles.css"
 import Footer from './footer'
 import Nav from './nav'
 
 interface Props {
-    lang: String;
-    changeLang: Function;
     children?: JSX.Element[] | JSX.Element;
 }
 export const Layout = (props: Props) => {
-    const { lang, changeLang, children } = props
+    const { children } = props
+    const [lang, setLang] = useState<string>('EN')
+
+    const changeLang = (e: React.MouseEvent<HTMLElement>) => {
+        if (lang === 'עב')
+            setLang('EN')
+        else
+            setLang('עב')
+        console.log(lang);
+    }
+
     return (
-        <div className='layout'>
+        <div className={`main layout ${lang === 'EN' ? 'heb' : 'eng'}`}>
             <Head />
             <Nav lang={lang} changeLang={changeLang} />
             {children}
