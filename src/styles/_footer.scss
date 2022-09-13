@@ -21,12 +21,14 @@ footer {
         display: flex;
         flex-direction: column;
         height: 100%;
-        // align-items: center;
 
-        @include tablet-large() {
-            max-width: 1302px;
+        @include desktop {
+            max-width: 1240px;
             margin: 0 auto;
-            // justify-content: space-between;
+        }
+
+        @include desktop-large {
+            max-width: 1302px;
         }
     }
 

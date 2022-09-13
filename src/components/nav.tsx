@@ -30,14 +30,14 @@ function Nav(props: Props) {
                 <button className="background-side-nav" onClick={(e: React.MouseEvent<HTMLElement>) => { toggleNav() }}></button>
                 {/* <div className="side-bar"></div> */}
                 <div className="links">
-                    <button className="language" onClick={(e: React.MouseEvent<HTMLElement>) => { changeLang() }}>{lang}</button>
-                    <Link to='contact'>צור קשר</Link>
-                    <Link to='about'>אודות</Link>
-                    <Link className='donated' to='donated'>מתנדבים ותורמים</Link>
-                    <Link to='events'>אירועים</Link>
-                    <Link to='bracelets'>צמידים</Link>
-                    <Link to='omers-house'>הבית של עומר</Link>
                     <Link to='omers-batterfly'>הפרפרים של עומר</Link>
+                    <Link to='omers-house'>הבית של עומר</Link>
+                    <Link to='bracelets'>צמידים</Link>
+                    <Link to='events'>אירועים</Link>
+                    <Link className='donated' to='donated'>מתנדבים ותורמים</Link>
+                    <Link to='about'>אודות</Link>
+                    <Link to='contact'>צור קשר</Link>
+                    <button className="language" onClick={(e: React.MouseEvent<HTMLElement>) => { changeLang() }}>{lang}</button>
                 </div>
             </div>
             <div className='left'>

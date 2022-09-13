@@ -388,12 +388,9 @@ nav .links {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #ffffff;
   text-align: right;
   padding-top: 48px;
@@ -408,10 +405,6 @@ nav .links * {
 
 nav .links a {
   margin-bottom: 30px;
-}
-
-nav .links a:first-child {
-  margin-bottom: 0px;
 }
 
 nav .links .language {
@@ -665,10 +658,16 @@ footer .wrapper {
   height: 100%;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
+  footer .wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1440px) {
   footer .wrapper {
     max-width: 1302px;
-    margin: 0 auto;
   }
 }
 

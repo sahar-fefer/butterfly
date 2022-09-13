@@ -139,8 +139,8 @@ nav {
         // transition: all .2s cubic-bezier(0.05, 0.61, 0.41, 0.95);
         transition: all .3s;
         display: flex;
-        flex-direction: column-reverse;
-        justify-content: flex-end;
+        flex-direction: column;
+        // justify-content: flex-end;
         color: #ffffff;
         text-align: right;
         padding-top: 48px;
@@ -154,10 +154,6 @@ nav {
 
         a {
             margin-bottom: 30px;
-        }
-
-        a:first-child {
-            margin-bottom: 0px;
         }
 
         .language {
