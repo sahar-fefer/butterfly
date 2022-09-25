@@ -4,14 +4,10 @@
 
 .contact-wrapper {
     background: #F7F7F7;
-    padding: 50px $side-space;
-
-    // @include tablet-large {
-    //     padding: 60px $side-space;
-    // }
+    padding: 0 $side-space;
 
     @include desktop {
-        padding: 74px 0;
+        padding: 0;
         display: flex;
         justify-content: center;
         gap: 198px;

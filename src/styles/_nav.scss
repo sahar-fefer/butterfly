@@ -12,6 +12,7 @@ nav {
     left: 0;
     right: 0;
     z-index: 10;
+    filter: drop-shadow(0px 4px 10px rgba(13, 31, 45, 0.08));
 
     @include tablet-large() {
         height: 77px;

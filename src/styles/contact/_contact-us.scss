@@ -1,6 +1,12 @@
 @import '../variables';
 
 .contact-us {
+    margin-top: 50px;
+
+    @include desktop {
+        margin-top: 74px;
+    }
+
     h1 {
         font-weight: 700;
         font-size: 30px;

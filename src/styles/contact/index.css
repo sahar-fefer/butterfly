@@ -76,6 +76,16 @@
   }
 }
 
+.contact-us {
+  margin-top: 50px;
+}
+
+@media (min-width: 1280px) {
+  .contact-us {
+    margin-top: 74px;
+  }
+}
+
 .contact-us h1 {
   font-weight: 700;
   font-size: 30px;
@@ -207,7 +217,7 @@
 
 @media (min-width: 1280px) {
   .form {
-    margin-top: 75px;
+    margin-top: 155px;
   }
 }
 
@@ -243,6 +253,10 @@
   margin-top: 0;
 }
 
+.form textarea {
+  height: 165px;
+}
+
 .form .submit {
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -261,12 +275,12 @@
 
 .contact-wrapper {
   background: #F7F7F7;
-  padding: 50px var(--side-space);
+  padding: 0 var(--side-space);
 }
 
 @media (min-width: 1280px) {
   .contact-wrapper {
-    padding: 74px 0;
+    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
