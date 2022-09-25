@@ -20,7 +20,7 @@ export const Layout = (props: Props) => {
     }
 
     return (
-        <div className={`main layout ${lang === 'EN' ? 'heb' : 'eng'}`}>
+        <div className={`${lang === 'EN' ? 'heb' : 'eng'} layout`}>
             <Head />
             <Nav lang={lang} changeLang={changeLang} />
             {children}

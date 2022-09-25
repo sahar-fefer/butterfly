@@ -1,0 +1,19 @@
+@import '../variables';
+@import './contact-us';
+@import './form';
+
+.contact-wrapper {
+    background: #F7F7F7;
+    padding: 50px $side-space;
+
+    // @include tablet-large {
+    //     padding: 60px $side-space;
+    // }
+
+    @include desktop {
+        padding: 74px 0;
+        display: flex;
+        justify-content: center;
+        gap: 198px;
+    }
+}

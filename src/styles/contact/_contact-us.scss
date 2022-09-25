@@ -1,0 +1,76 @@
+@import '../variables';
+
+.contact-us {
+    h2 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 39px;
+        color: #0D1F2D;
+        margin-bottom: 20px;
+
+        @include desktop {
+            font-size: 45px;
+            line-height: 59px;
+            margin-bottom: 22px;
+        }
+    }
+
+    .title {
+        font-size: 18px;
+        line-height: 24px;
+
+        @include desktop {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+
+    .sub,
+    .text {
+        font-weight: 400;
+        color: #607E82;
+    }
+
+    .text {
+        font-size: 16px;
+        line-height: 21px;
+        padding-top: 3px;
+
+        @include desktop {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    .s-title {
+        padding-top: 2px;
+
+        @include desktop {
+            padding-top: 0;
+        }
+
+    }
+
+    .m {
+        font-weight: 600;
+        color: #0D1F2D;
+        margin: 30px 0 16px;
+
+        @include desktop {
+            margin-top: 36px;
+        }
+    }
+
+    .num,
+    .email {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        color: #FE2932;
+
+        @include desktop {
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+}

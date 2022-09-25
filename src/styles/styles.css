@@ -160,19 +160,18 @@ button {
   padding: 0;
 }
 
-.main {
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-}
-
 .heb {
   direction: rtl;
 }
 
 .eng {
   direction: ltr;
+}
+
+.fill-page {
+  position: absolute;
+  inset: 0;
+  top: 87px;
 }
 
 :root {
@@ -632,6 +631,8 @@ footer {
   font-size: 14px;
   line-height: 18px;
   padding: 50px 32px 28px;
+  position: absolute;
+  bottom: 0;
 }
 
 @media (min-width: 1024px) {
