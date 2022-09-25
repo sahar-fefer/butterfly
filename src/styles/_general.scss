@@ -133,4 +133,9 @@ button {
     position: absolute;
     inset: 0;
     top: 87px;
+
+    &~footer {
+        position: absolute;
+        bottom: 0;
+    }
 }

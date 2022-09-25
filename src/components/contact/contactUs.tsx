@@ -4,7 +4,7 @@ function contactUs() {
 
     return (
         <section className='contact-us'>
-            <h2>צור קשר</h2>
+            <h1>צור קשר</h1>
             <div className='title sub'>שלחו פנייה ונשמח לעמוד לרשותכם בכל נושא</div>
             <div className='title m'>יש לכם שאלה דחופה?</div>
             <div className='text s-title'>אנחנו זמינות עבורכם גם בטלפון:</div>

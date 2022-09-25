@@ -30,7 +30,7 @@ function Nav(props: Props) {
                 <button className="background-side-nav" onClick={(e: React.MouseEvent<HTMLElement>) => { toggleNav() }}></button>
                 {/* <div className="side-bar"></div> */}
                 <div className="links">
-                    <Link to='omers-batterfly'>הפרפרים של עומר</Link>
+                    <Link to='omers-butterflies'>הפרפרים של עומר</Link>
                     <Link to='omers-house'>הבית של עומר</Link>
                     <Link to='bracelets'>צמידים</Link>
                     <Link to='events'>אירועים</Link>

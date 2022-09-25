@@ -1,0 +1,78 @@
+:root {
+  --side-space: 15px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --side-space: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --side-space: 28px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --side-space: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .m-to-d-l {
+    display: none;
+  }
+}
+
+.d-l-grid {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .d-l-grid {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
+.bracelets {
+  margin: 50px --side-space;
+}
+
+@media (min-width: 1280px) {
+  .bracelets {
+    margin: 50px auto;
+    max-width: 85vw;
+  }
+}
+
+.bracelets h1 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  color: #0D1F2D;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1280px) {
+  .bracelets h1 {
+    font-size: 45px;
+    line-height: 59px;
+  }
+}
+
+.bracelets .sub-title {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  color: #0D1F2D;
+}
+
+@media (min-width: 1280px) {
+  .bracelets .sub-title {
+    font-size: 35px;
+    line-height: 49px;
+  }
+}

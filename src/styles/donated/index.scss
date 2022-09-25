@@ -1,0 +1,35 @@
+@import '../variables';
+
+.donated {
+    margin: 50px --side-space;
+
+    @include desktop {
+        margin: 50px auto;
+        max-width: 85vw;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 39px;
+        color: #0D1F2D;
+        margin-bottom: 20px;
+
+        @include desktop {
+            font-size: 45px;
+            line-height: 59px;
+        }
+    }
+
+    .sub-title {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 30px;
+        color: #0D1F2D;
+
+        @include desktop {
+            font-size: 35px;
+            line-height: 49px;
+        }
+    }
+}
