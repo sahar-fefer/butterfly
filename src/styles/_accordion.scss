@@ -41,7 +41,6 @@ $transition-time: .3s;
         .answer {
             opacity: 0;
             visibility: hidden;
-            max-height: 0;
             margin: 0;
         }
 
@@ -89,6 +88,8 @@ $transition-time: .3s;
         line-height: 21px;
     }
 
+    .answer-wrapper {}
+
     .answer {
         color: $regular-gray;
         max-width: 740px;
@@ -99,7 +100,6 @@ $transition-time: .3s;
         opacity: 1;
         visibility: visible;
         overflow: hidden;
-        max-height: 999px;
         max-height: 999px;
     }
 }

@@ -17,7 +17,12 @@ function Faq() {
     const [activeAccordion, setActiveAccordion] = useState<Number>(-1);
 
     const accordionElements = faqInfo.map((accordionsInfo, key: number) => (
-        <Accordion accordionsInfo={accordionsInfo} key={key} id={key} isActive={activeAccordion === key} activeAccordion={activeAccordion} setActiveAccordion={setActiveAccordion} />
+        <Accordion accordionsInfo={accordionsInfo}
+            key={key}
+            id={key}
+            isActive={activeAccordion === key}
+            activeAccordion={activeAccordion}
+            setActiveAccordion={setActiveAccordion} />
     ))
 
     return (

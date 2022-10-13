@@ -5,12 +5,14 @@
     margin-top: 50px;
 
     @include desktop {
-        margin-top: 155px;
+        // margin-top: 155px;
+        margin-top: 6%;
     }
 
-    select,
+    button,
     input,
-    textarea {
+    textarea,
+    ul {
         width: 100%;
         max-width: 478px;
         height: 54px;
@@ -19,14 +21,23 @@
         border-radius: 1px;
         padding: 15px 20px 15px 21px;
         margin-top: 10px;
-        color: #607E82;
+        font-family: 'Assistant';
         font-weight: 400;
         font-size: 16px;
         line-height: 21px;
+        color: #607E82;
+        transition: all .2s;
+
 
         @include desktop {
             font-size: 18px;
             line-height: 24px;
+        }
+
+
+        &:focus {
+            outline: none;
+            box-shadow: 0px 0px 8px 2px rgba(255, 225, 226, 0.7);
         }
 
         &:first-child {
@@ -36,6 +47,7 @@
 
     textarea {
         height: 165px;
+        resize: none;
     }
 
     .submit {
@@ -44,12 +56,88 @@
         color: #FFFFFF;
         background: rgba(255, 18, 28, 0.9);
         border: 2px solid #FF121C;
-        // opacity: 0.9;
+        cursor: pointer;
 
         @include desktop {
             font-size: 16px;
             line-height: 21px;
             width: 218px;
+        }
+    }
+
+
+
+    .dropdown {
+        position: relative;
+        z-index: 2;
+        // overflow: hidden;
+
+        &.active {
+            box-shadow: 0px 0px 8px 2px rgba(255, 225, 226, 0.7);
+
+            svg {
+                -webkit-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+            }
+
+            ul {
+                opacity: 1;
+                height: 146px;
+                pointer-events: auto;
+                box-shadow: 0px 1px 1px rgba(58, 72, 80, 0.07),
+                    0px 4px 12px rgba(176, 189, 197, 0.13),
+                    0px 1px 4px rgba(176, 189, 197, 0.07);
+                padding-top: 6px;
+                padding-bottom: 10px;
+                border: 2px solid #FFE1E2;
+                border-top: 0px;
+            }
+        }
+
+        svg,
+        button,
+        ul,
+        li {
+            transition: all 0.2s cubic-bezier(0.78, 0.18, 0.31, 1.08);
+        }
+
+        button {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 3;
+            overflow: hidden;
+        }
+
+        ul {
+            background: #ffffff;
+            position: absolute;
+            padding: 0 20px 0 21px;
+            border: 0px;
+            border: 2px solid #F7F7F7;
+            border-top: 0px;
+            margin: 0;
+            pointer-events: none;
+            z-index: 2;
+            left: 0;
+            // bottom: -2px;
+            top: 54px;
+            width: 100%;
+            height: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        li {
+            list-style: none;
+            padding: 4px 0;
+            background: #ffffff;
+            cursor: pointer;
+
+            &:hover {
+                color: #4d4d4d;
+            }
         }
     }
 }
