@@ -21,8 +21,8 @@ function MainBanner(props: Props) {
                     אנחנו מעבירות אותה הלאה</h1>
                 <div className="sub-title">עזרת לנו לראות, אנחנו נמשיך להפיץ את אורך, <br />טוב ליבך ושמחת החיים שלך.</div>
                 <div className="ctas">
-                    <Link to="/" className="donate"><DonateHart color='black' />לתרומה</Link>
-                    <Link to="/" className="volunteer">להתנדבות</Link>
+                    <Link to="/donate" className="donate-button"><DonateHart color='black' />לתרומה</Link>
+                    <Link to="/donate" className="volunteer">להתנדבות</Link>
                 </div>
             </div>
         </section>

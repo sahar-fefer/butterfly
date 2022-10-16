@@ -34,7 +34,7 @@ function Nav(props: Props) {
                     <Link to='/omers-house'>הבית של עומר</Link>
                     <Link to='/bracelets'>צמידים</Link>
                     <Link to='/events'>אירועים</Link>
-                    <Link className='donated' to='/donated'>מתנדבים ותורמים</Link>
+                    <Link className='donate' to='/donate'>מתנדבים ותורמים</Link>
                     <Link to='/about'>אודות</Link>
                     <Link to='/contact'>צור קשר</Link>
                     <button className="language" onClick={(e: React.MouseEvent<HTMLElement>) => { changeLang() }}>{lang}</button>
@@ -42,7 +42,7 @@ function Nav(props: Props) {
             </div>
             <div className='left'>
                 <button className="language" onClick={(e: React.MouseEvent<HTMLElement>) => { changeLang() }}>{lang}</button>
-                <Link to="/" className="donate">
+                <Link to="/donate" className="donate-button">
                     <DonateHart color='white' />
                     לתרומה
                 </Link>

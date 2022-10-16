@@ -320,7 +320,7 @@ nav .background-side-nav {
   background: rgba(0, 0, 0, 0.3);
 }
 
-nav .donate {
+nav .donate-button {
   width: 102px;
   height: 42px;
   background: #FF121C;
@@ -339,7 +339,7 @@ nav .donate {
 }
 
 @media (min-width: 1024px) {
-  nav .donate {
+  nav .donate-button {
     width: 125px;
     height: 100%;
     font-size: 18px;
@@ -349,18 +349,18 @@ nav .donate {
 }
 
 @media (min-width: 1280px) {
-  nav .donate {
+  nav .donate-button {
     width: 155px;
   }
 }
 
-nav .donate .hart {
+nav .donate-button .hart {
   width: 10px;
   height: 9px;
 }
 
 @media (min-width: 1024px) {
-  nav .donate .hart {
+  nav .donate-button .hart {
     width: 13px;
     height: 12px;
   }
@@ -420,7 +420,7 @@ nav .links .language {
   display: block;
 }
 
-nav .links .donated {
+nav .links .donate-button {
   margin-bottom: 80px;
 }
 
@@ -449,7 +449,7 @@ nav .links .donated {
   nav .links a:first-child {
     margin-right: 30px;
   }
-  nav .links .donated {
+  nav .links .donate-button {
     margin-bottom: 0;
   }
 }
@@ -534,14 +534,14 @@ nav .separator.right {
   }
 }
 
-.donate {
+.donate-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
 }
 
-.donate:hover .hart {
+.donate-button:hover .hart {
   -webkit-animation: heartbeat 1.5s infinite;
           animation: heartbeat 1.5s infinite;
 }

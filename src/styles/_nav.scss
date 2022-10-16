@@ -81,7 +81,7 @@ nav {
         background: rgba(0, 0, 0, 0.3);
     }
 
-    .donate {
+    .donate-button {
         width: 102px;
         height: 42px;
         background: $red;
@@ -162,7 +162,7 @@ nav {
             display: block;
         }
 
-        .donated {
+        .donate-button {
             margin-bottom: 80px;
         }
 
@@ -191,7 +191,7 @@ nav {
                 margin-right: 30px;
             }
 
-            .donated {
+            .donate-button {
                 margin-bottom: 0;
             }
         }

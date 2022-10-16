@@ -1,10 +1,10 @@
 import * as React from "react"
-import "../styles/donated/index.scss"
+import "../styles/donate/index.scss"
 
 import Layout from "../components/layout"
 
 //  markup
-const Donated = () => {
+const Donate = () => {
 
   return (
     <Layout>
@@ -16,4 +16,4 @@ const Donated = () => {
   )
 }
 
-export default Donated
+export default Donate

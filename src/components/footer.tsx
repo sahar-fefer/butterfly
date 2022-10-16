@@ -10,6 +10,7 @@ export default () => {
                         <div className="title">ראשי</div>
                         <Link to='omers-house'>הבית של עומר</Link>
                         <Link to='omers-batterfly'>הפרפרים של עומר</Link>
+                        <Link to='bracelets'>צמידים</Link>
                     </div>
                     <div className="group">
                         <div className="title">יצירת קשר</div>
@@ -20,8 +21,8 @@ export default () => {
                     <div className="group">
                         <div className="title">מידע</div>
                         <Link to='about'>אודות</Link>
-                        <Link to='bracelets'>צמידים</Link>
                         <Link to='events'>אירועים</Link>
+                        <Link to='privacy'>מדיניות פרטיות</Link>
                     </div>
                     <div className="group">
                         <div className="title">Social</div>

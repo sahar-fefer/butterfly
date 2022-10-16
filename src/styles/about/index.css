@@ -118,7 +118,7 @@
 .about-footer .info {
   font-weight: 400;
   font-size: 16px;
-  line-height: 29px;
+  line-height: 150%;
   text-align: center;
   color: #607E82;
 }

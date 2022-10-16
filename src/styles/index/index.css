@@ -154,6 +154,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
   position: relative;
 }
 
@@ -172,8 +173,8 @@
 }
 
 .about .ctas .cta:hover .cta-img {
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
-          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .about .ctas .cta:hover .more-info {
@@ -391,14 +392,14 @@
   }
 }
 
-.main-banner .donate {
+.main-banner .donate-button {
   -webkit-transition: all .2s;
   transition: all .2s;
   background: rgba(255, 255, 255, 0.9);
   color: #000000;
 }
 
-.main-banner .donate:hover {
+.main-banner .donate-button:hover {
   background: white;
 }
 
