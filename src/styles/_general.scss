@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
+@import './variables';
 
 html,
 body,
@@ -132,10 +133,38 @@ button {
 .fill-page {
     position: absolute;
     inset: 0;
-    top: 87px;
+    top: 70px;
+
+    @include desktop {
+        top: 87px;
+    }
+
+    @include tablet-large {
+        top: 77px;
+    }
 
     &~footer {
         position: absolute;
         bottom: 0;
     }
+}
+
+.desktop-fill-page {
+    // @include tablet-large {
+    //     position: absolute;
+    //     inset: 0;
+    //     top: 77px;
+    // }
+
+    @include desktop {
+        position: absolute;
+        inset: 0;
+        top: 87px;
+
+        &~footer {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
 }

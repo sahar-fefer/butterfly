@@ -10,14 +10,14 @@ function contactUs() {
             <div className='text s-title'>אנחנו זמינות עבורכם גם בטלפון:</div>
             <div className='text'>
                 יעל -
-                <span className="num"> 052-3338118</span>
+                <a className="num" href="tel:+972523338118">052-3338118</a>
             </div>
             <div className='text'>
                 איילת -
-                <span className="num"> 054-4404322</span>
+                <a className="num" href="tel:+97254-4404322">054-4404322</a>
             </div>
             <div className='title m'>מייל</div>
-            <div className="email">omer.butterflies@gmail.com</div>
+            <a className="email" href="mailto: omer.butterflies@gmail.com">omer.butterflies@gmail.com</a>
         </section>
     )
 }

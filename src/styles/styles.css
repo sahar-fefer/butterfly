@@ -38,6 +38,45 @@
   }
 }
 
+:root {
+  --side-space: 15px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --side-space: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --side-space: 28px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --side-space: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .m-to-d-l {
+    display: none;
+  }
+}
+
+.d-l-grid {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .d-l-grid {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
 html,
 body,
 div,
@@ -171,12 +210,36 @@ button {
 .fill-page {
   position: absolute;
   inset: 0;
-  top: 87px;
+  top: 70px;
+}
+
+@media (min-width: 1280px) {
+  .fill-page {
+    top: 87px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fill-page {
+    top: 77px;
+  }
 }
 
 .fill-page ~ footer {
   position: absolute;
   bottom: 0;
+}
+
+@media (min-width: 1280px) {
+  .desktop-fill-page {
+    position: absolute;
+    inset: 0;
+    top: 87px;
+  }
+  .desktop-fill-page ~ footer {
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 :root {
@@ -226,7 +289,7 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   color: #607E82;
   background: #fffffff2 !important;
   position: -webkit-sticky;
@@ -292,6 +355,8 @@ nav .burger-bar .line {
 nav.open .links {
   right: 0;
   z-index: 11;
+  width: 285px;
+  pointer-events: all;
 }
 
 nav.open .background-side-nav {
@@ -304,6 +369,7 @@ nav.open .background-side-nav {
   visibility: visible;
   -webkit-transition: all .3s .2s;
   transition: all .3s .2s;
+  z-index: 1111;
 }
 
 nav.open .burger-bar {
@@ -316,6 +382,7 @@ nav .background-side-nav {
   position: fixed;
   inset: 0;
   opacity: 0;
+  height: 100vh;
   visibility: hidden;
   background: rgba(0, 0, 0, 0.3);
 }
@@ -381,11 +448,12 @@ nav .language {
 
 nav .links {
   position: fixed;
-  width: 285px;
+  width: 165px;
+  height: 100vh;
   background: #0D1F2D;
   top: 0;
   bottom: 0;
-  right: -120px;
+  right: 0;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all .3s;
@@ -401,6 +469,10 @@ nav .links {
   text-align: right;
   padding-top: 48px;
   padding-right: 55px;
+  word-break: keep-all;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: -2;
 }
 
 nav .links * {
@@ -411,6 +483,14 @@ nav .links * {
 
 nav .links a {
   margin-bottom: 30px;
+}
+
+nav .links a.active {
+  color: #FF121C;
+}
+
+nav .links a.active:hover {
+  color: #E9111B;
 }
 
 nav .links .language {
@@ -430,6 +510,9 @@ nav .links .donate-button {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     background: transparent;
     opacity: 1;
     visibility: visible;
@@ -632,7 +715,7 @@ nav .separator.right {
 }
 
 footer {
-  height: 421px;
+  height: 441px;
   width: 100%;
   background: #0D1F2D;
   font-size: 14px;

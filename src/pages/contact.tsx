@@ -10,7 +10,7 @@ const About = () => {
 
   return (
     <Layout>
-      <div className="contact-wrapper fill-page">
+      <div className="contact-wrapper desktop-fill-page">
         {/* <div className="page-wrapper"> */}
         <ContactUs />
         <Form />

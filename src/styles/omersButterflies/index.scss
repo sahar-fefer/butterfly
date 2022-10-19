@@ -1,12 +1,8 @@
 @import '../variables';
 
 .omers-butterflies {
-    margin: 50px --side-space;
-
-    @include desktop {
-        margin: 50px auto;
-        max-width: 85vw;
-    }
+    margin: 50px auto;
+    max-width: 85vw;
 
     h1 {
         font-weight: 700;
