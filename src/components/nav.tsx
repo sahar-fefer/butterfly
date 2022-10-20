@@ -9,9 +9,13 @@ interface Props {
 
 function Nav(props: Props) {
     const { lang, changeLang } = props
-    const [activeLink, setActiveLink] = useState<string>(window.location.pathname.replaceAll('/', ''))
+    const [activeLink, setActiveLink] = useState<string>('/')
     // const [isNavOpen, setIsNavOpen] = useState<boolean>(true)
     const [isNavOpen, setIsNavOpen] = useState<boolean>(JSON.parse(localStorage.getItem('isNavOpen') || ""))
+
+    useEffect(() => {
+        setActiveLink(window.location.pathname.replaceAll('/', ''))
+    }, []);
 
     useEffect(() => {
         if (isNavOpen) {
