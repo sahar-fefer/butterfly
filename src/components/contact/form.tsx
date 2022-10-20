@@ -1,6 +1,4 @@
 import React, { useRef, useState, useEffect } from 'react'
-import AyeletAndOmer from '../../images/ayelet-and-omer.jpg'
-import OmerTattoo from "../../images/butterflies-are-forever-omer's-tattoo.jpg"
 
 interface FormInfo {
     subject: string,
@@ -92,6 +90,9 @@ const Form = () => {
                     <li onClick={(e: React.MouseEvent<HTMLElement>) => toggleButton(e as any)}
                         data-name='subject'
                         data-value="house-available">בדיקת זמינות לבית לפתרון דיור</li>
+                    <li onClick={(e: React.MouseEvent<HTMLElement>) => toggleButton(e as any)}
+                        data-name='else'
+                        data-value="house-available">אחר</li>
                 </ul>
             </div>
             <input placeholder='שם מלא'
