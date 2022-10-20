@@ -37,12 +37,12 @@
   }
 }
 
-.donated {
+.donate {
   margin: 50px auto;
   max-width: 85vw;
 }
 
-.donated h1 {
+.donate h1 {
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
@@ -51,13 +51,13 @@
 }
 
 @media (min-width: 1280px) {
-  .donated h1 {
+  .donate h1 {
     font-size: 45px;
     line-height: 59px;
   }
 }
 
-.donated .sub-title {
+.donate .sub-title {
   font-weight: 400;
   font-size: 25px;
   line-height: 30px;
@@ -65,7 +65,7 @@
 }
 
 @media (min-width: 1280px) {
-  .donated .sub-title {
+  .donate .sub-title {
     font-size: 35px;
     line-height: 49px;
   }
