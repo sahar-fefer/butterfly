@@ -37,12 +37,12 @@
   }
 }
 
-.donate {
+.donate-page {
   margin: 50px auto;
   max-width: 85vw;
 }
 
-.donate h1 {
+.donate-page h1 {
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
@@ -51,13 +51,13 @@
 }
 
 @media (min-width: 1280px) {
-  .donate h1 {
+  .donate-page h1 {
     font-size: 45px;
     line-height: 59px;
   }
 }
 
-.donate .sub-title {
+.donate-page .sub-title {
   font-weight: 400;
   font-size: 25px;
   line-height: 30px;
@@ -65,7 +65,7 @@
 }
 
 @media (min-width: 1280px) {
-  .donate .sub-title {
+  .donate-page .sub-title {
     font-size: 35px;
     line-height: 49px;
   }

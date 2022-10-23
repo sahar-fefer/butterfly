@@ -185,7 +185,7 @@ nav {
             display: block;
         }
 
-        .donate-button {
+        .donate {
             margin-bottom: 80px;
         }
 
@@ -199,6 +199,8 @@ nav {
             display: block;
             color: inherit;
             padding: 0;
+            pointer-events: all;
+            z-index: 1;
 
             .language {
                 display: none;
@@ -215,7 +217,7 @@ nav {
                 margin-right: 30px;
             }
 
-            .donate-button {
+            .donate {
                 margin-bottom: 0;
             }
         }

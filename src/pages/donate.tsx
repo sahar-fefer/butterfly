@@ -8,7 +8,7 @@ const Donate = () => {
 
   return (
     <Layout>
-      <div className="donate fill-page">
+      <div className="donate-page fill-page">
         <h1>מתנדבים ותורמים</h1>
         <div className="sub-title">העמוד יעלה בקרוב...</div>
       </div>

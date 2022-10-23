@@ -500,7 +500,7 @@ nav .links .language {
   display: block;
 }
 
-nav .links .donate-button {
+nav .links .donate {
   margin-bottom: 80px;
 }
 
@@ -519,6 +519,8 @@ nav .links .donate-button {
     display: block;
     color: inherit;
     padding: 0;
+    pointer-events: all;
+    z-index: 1;
   }
   nav .links .language {
     display: none;
@@ -532,7 +534,7 @@ nav .links .donate-button {
   nav .links a:first-child {
     margin-right: 30px;
   }
-  nav .links .donate-button {
+  nav .links .donate {
     margin-bottom: 0;
   }
 }

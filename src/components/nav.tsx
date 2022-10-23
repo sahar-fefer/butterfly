@@ -9,28 +9,30 @@ interface Props {
 
 function Nav(props: Props) {
     const { lang, changeLang } = props
-    const [activeLink, setActiveLink] = useState<string>('/')
-    // const [isNavOpen, setIsNavOpen] = useState<boolean>(true)
-    const [isNavOpen, setIsNavOpen] = useState<boolean>(JSON.parse(localStorage.getItem('isNavOpen') || ""))
+    // let locationPathname = '/';
+    // if (typeof window !== "undefined") {
+    //     locationPathname = window.location.pathname.replaceAll('/', '');
+    // }
+    // const [activeLink, setActiveLink] = useState<string>(locationPathname)
+    let getDataFromLocalStorage: boolean | undefined;
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('isNavOpen')) {
+        getDataFromLocalStorage = JSON.parse(localStorage.getItem('isNavOpen') || "");
+    }
+    const [isNavOpen, setIsNavOpen] = useState<boolean>(getDataFromLocalStorage ? true : false)
 
     useEffect(() => {
-        setActiveLink(window.location.pathname.replaceAll('/', ''))
-    }, []);
-
-    useEffect(() => {
+        // setIsNavOpen(JSON.parse(localStorage.getItem('isNavOpen') || ""))
         if (isNavOpen) {
             setTimeout(() => {
                 setIsNavOpen(false);
                 localStorage.setItem('isNavOpen', JSON.stringify(false));
             }, 250);
         }
-        console.log('isNavOpen timeout', isNavOpen);
     }, [])
 
     useEffect(() => {
         if (isNavOpen)
             localStorage.setItem('isNavOpen', JSON.stringify(isNavOpen));
-        // console.log('isNavOpen', isNavOpen);
     }, [isNavOpen]);
 
     const toggleNav = (e: React.MouseEvent<HTMLElement>) => {
@@ -54,37 +56,39 @@ function Nav(props: Props) {
                 <button className="background-side-nav" onClick={(e: React.MouseEvent<HTMLElement>) => { toggleNav(e) }}></button>
                 <div className="links">
                     <Link to='/omers-butterflies'
-                        // onClick={(e: React.MouseEvent<HTMLElement>) => { toggleNav() }}
-                        className={activeLink === 'omers-butterflies' ? 'active' : ''}>
+                        partiallyActive={true}
+                        activeClassName="active">
                         הפרפרים של עומר
                     </Link>
                     <Link to='/omers-house'
-                        // onClick={(e: React.MouseEvent<HTMLElement>) => { toggleNav() }}
-                        className={activeLink === 'omers-house' ? 'active' : ''}>
+                        partiallyActive={true}
+                        activeClassName="active">
                         הבית של עומר
                     </Link>
                     <Link to='/bracelets'
-                        // onClick={(e: React.MouseEvent<HTMLElement>) => { toggleNav() }}
-                        className={activeLink === 'bracelets' ? 'active' : ''}>
+                        partiallyActive={true}
+                        activeClassName="active">
                         צמידים
                     </Link>
                     <Link to='/events'
-                        // onClick={(e: React.MouseEvent<HTMLElement>) => { toggleNav() }}
-                        className={activeLink === 'events' ? 'active' : ''}>
+                        partiallyActive={true}
+                        activeClassName="active">
                         אירועים
                     </Link>
                     <Link to='/donate'
-                        className={`donate ${activeLink === 'donate' ? 'active' : ''}`}>
+                        className={'donate'}
+                        partiallyActive={true}
+                        activeClassName="active">
                         מתנדבים ותורמים
                     </Link>
                     <Link to='/about'
-                        // onClick={(e: React.MouseEvent<HTMLElement>) => { toggleNav() }}
-                        className={activeLink === 'about' ? 'active' : ''}>
+                        partiallyActive={true}
+                        activeClassName="active">
                         אודות
                     </Link>
                     <Link to='/contact'
-                        // onClick={(e: React.MouseEvent<HTMLElement>) => { toggleNav() }}
-                        className={activeLink === 'contact' ? 'active' : ''}>
+                        partiallyActive={true}
+                        activeClassName="active">
                         צור קשר
                     </Link>
                     <button className="language" onClick={(e: React.MouseEvent<HTMLElement>) => { changeLang() }}>{lang}</button>
