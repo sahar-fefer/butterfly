@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkbutterfly=self.webpackChunkbutterfly||[]).push([[722],{7728:function(e,t,l){l.r(t);var a=l(7294),n=l(4249);t.default=function(){return a.createElement(n.Z,null,a.createElement("div",{className:"donate fill-page"},a.createElement("h1",null,"מתנדבים ותורמים"),a.createElement("div",{className:"sub-title"},"העמוד יעלה בקרוב...")))}}}]);
+//# sourceMappingURL=component---src-pages-donate-tsx-44a35a252d7635b029fd.js.map
