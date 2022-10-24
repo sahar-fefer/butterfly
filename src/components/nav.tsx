@@ -26,7 +26,7 @@ function Nav(props: Props) {
             setTimeout(() => {
                 setIsNavOpen(false);
                 localStorage.setItem('isNavOpen', JSON.stringify(false));
-            }, 250);
+            }, 400);
         }
     }, [])
 
