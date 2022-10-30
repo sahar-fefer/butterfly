@@ -40,6 +40,10 @@ function Nav(props: Props) {
         e.preventDefault()
     }
 
+    const onLogoClick = () => {
+        localStorage.setItem('isNavOpen', JSON.stringify(false));
+    }
+
     return (
         <nav className={isNavOpen ? 'open' : 'close'}>
             <div className='right'>
@@ -49,7 +53,7 @@ function Nav(props: Props) {
                     <div className="line"></div>
                 </button>
                 <div className="separator right" />
-                <Link className="logo" to='/'>
+                <Link className="logo" to='/' onClick={onLogoClick}>
                     <Logo />
                 </Link>
                 <div className="separator left" />
