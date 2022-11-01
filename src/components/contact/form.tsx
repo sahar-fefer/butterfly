@@ -1,34 +1,32 @@
 import React, { useRef, useState, useEffect } from 'react'
-
-interface FormInfo {
-    subject: string,
-    fullName: string,
-    email: string,
-    formContent: string
-}
+import useForm from "./useForm";
+import validate from './formValidation';
 
 const Form = () => {
-    const [formInfo, setFormInfo] = useState<FormInfo>({
-        subject: '',
-        fullName: '',
-        email: '',
-        formContent: ''
-    })
+    const {
+        formInfo,
+        errors,
+        handleChange,
+        handleSubmit,
+    } = useForm(submitForm, validate);
+
+    function submitForm() {
+        console.log('No errors, submit callback called!');
+    }
+
     const [dropdownTitle, setDropdownTitle] = useState('נושא הפנייה');
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-    const useOutsideClick = (callback: any) => {
+    const useOutsideClick = (callback: Function) => {
         const ref = useRef<HTMLDivElement>(null);
         useEffect(() => {
-            const handleClick = (event: any) => {
-                if (isDropdownOpen && ref.current && !ref.current.contains(event.target)) {
+            const handleClick = (e: MouseEvent) => {
+                if (isDropdownOpen && ref.current && !ref.current.contains(e.target as HTMLElement)) {
                     callback();
                     setIsDropdownOpen(!isDropdownOpen)
                 }
             };
-
             document.addEventListener('click', handleClick, true);
-
             return () => {
                 document.removeEventListener('click', handleClick, true);
             };
@@ -50,22 +48,6 @@ const Form = () => {
             handleChange(e)
         }
         setIsDropdownOpen(!isDropdownOpen)
-    }
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
-        let [name, value] = ''
-        if (e.target.name && e.target.value) {
-            [name, value] = [e.target.name, e.target.value]
-        } else if (e.target.dataset.name && e.target.dataset.value) {
-            [name, value] = [e.target.dataset.name, e.target.dataset.value]
-        }
-        setFormInfo({ ...formInfo, [name]: value });
-        console.log('change formInfo', formInfo);
-    }
-
-    const handleSubmit = (e: React.SyntheticEvent) => {
-        console.log('submit formInfo', formInfo);
-        e.preventDefault();
     }
 
     return (
@@ -98,26 +80,27 @@ const Form = () => {
             <input placeholder='שם מלא'
                 autoCapitalize='on'
                 type="text"
-                value={formInfo.fullName}
+                value={formInfo.fullName || ''}
                 name='fullName'
                 minLength={2}
                 maxLength={20}
-                required={true}
+                // required={true}
                 onChange={handleChange} />
             <input placeholder='מייל'
-                type="email"
-                value={formInfo.email}
+                // type="email"
+                type="text"
+                value={formInfo.email || ''}
                 name='email'
-                minLength={2}
-                maxLength={40}
-                required={true}
+                // minLength={2}
+                // maxLength={40}
+                // required={true}
                 onChange={handleChange} />
             <textarea placeholder='מה תרצו להגיד לנו?'
-                value={formInfo.formContent}
+                value={formInfo.formContent || ''}
                 name='formContent'
-                minLength={10}
-                maxLength={650}
-                required={true}
+                // minLength={10}
+                // maxLength={650}
+                // required={true}
                 onChange={(e) => handleChange(e)} />
             <input className='submit'
                 type="submit"
