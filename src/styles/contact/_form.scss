@@ -11,9 +11,10 @@
         padding: 6% 0 0;
     }
 
-    button,
+    .dropdown-button,
     input,
     textarea,
+    .submit,
     ul {
         width: 100%;
         max-width: 478px;
@@ -22,14 +23,14 @@
         border: 2px solid #FFE1E2;
         border-radius: 1px;
         padding: 15px 20px 15px 21px;
-        margin-top: 10px;
+        // margin-top: 10px;
+        margin-top: 7px;
         font-family: 'Assistant';
         font-weight: 400;
         font-size: 16px;
         line-height: 21px;
         color: #607E82;
         transition: all .2s;
-
 
         @include desktop {
             font-size: 18px;
@@ -50,6 +51,7 @@
     textarea {
         height: 165px;
         resize: none;
+        display: flow-root;
     }
 
     .submit {
@@ -58,20 +60,86 @@
         color: #FFFFFF;
         background: rgba(255, 18, 28, 0.9);
         border: 2px solid #FF121C;
+        display: block;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
 
         @include desktop {
             font-size: 16px;
             line-height: 21px;
             width: 218px;
         }
+
+        &.loading {
+            cursor: wait;
+
+            .text {
+                display: none;
+            }
+
+            .loader {
+                width: 18px;
+                height: 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                animation: spin 1s infinite forwards linear;
+
+                &::after {
+                    content: "";
+                    width: 18px;
+                    height: 9px;
+                    border-top-left-radius: 100px;
+                    border-top-right-radius: 100px;
+                    border: 2px solid rgb(255, 255, 255);
+                    border-bottom: 0;
+                    box-sizing: border-box;
+                    margin-bottom: auto;
+                }
+            }
+        }
+
+        &.submitted {
+            cursor: none;
+            pointer-events: none;
+
+            .text {
+                display: none;
+            }
+
+            .send {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .send {
+            cursor: pointer;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.2s ease 0.2s;
+            width: 16px;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(45deg);
+            }
+
+            to {
+                transform: rotate(405deg);
+            }
+        }
     }
-
-
 
     .dropdown {
         position: relative;
         z-index: 2;
+        // margin-bottom: 5px;
         // overflow: hidden;
 
         &.active {
@@ -101,13 +169,13 @@
         }
 
         svg,
-        button,
+        .dropdown-button,
         ul,
         li {
             transition: all 0.2s cubic-bezier(0.78, 0.18, 0.31, 1.08);
         }
 
-        button {
+        .dropdown-button {
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -145,5 +213,14 @@
                 color: #4d4d4d;
             }
         }
+    }
+
+    .err {
+        font-size: 14px;
+        color: #FF121C;
+        margin: 3px 8px;
+        margin-bottom: 0;
+        display: inline-block;
+        height: 0;
     }
 }

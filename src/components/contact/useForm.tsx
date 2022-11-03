@@ -7,7 +7,15 @@ export interface FormInfo {
   formContent: string
 }
 
-const useForm = (callback: any, validate: any) => {
+export interface Errors {
+  subject?: string,
+  fullName?: string,
+  email?: string,
+  formContent?: string
+}
+
+
+const useForm = (onSubmitForm: any, validate: any) => {
 
   const [formInfo, setFormInfo] = useState<FormInfo>({
     subject: '',
@@ -15,22 +23,25 @@ const useForm = (callback: any, validate: any) => {
     email: '',
     formContent: ''
   })
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<Errors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    if (Object.keys(errors).length === 0 && isSubmitting) {
-      callback();
-      console.log('submit');
-    }
+    setTimeout(() => {
+      if (Object.keys(errors).length === 0 && isSubmitting) {
+        onSubmitForm('submit');
+      } else if (Object.keys(errors).length > 0) {
+        onSubmitForm('error');
+      }
+    }, 1500)
   }, [errors]);
 
   const handleSubmit = (e: React.SyntheticEvent) => {
+    onSubmitForm('load');
     if (e) e.preventDefault();
     setErrors(validate(formInfo));
     setIsSubmitting(true);
     console.log('submit func');
-
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
