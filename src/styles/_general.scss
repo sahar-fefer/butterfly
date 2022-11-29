@@ -122,6 +122,39 @@ button {
     padding: 0;
 }
 
+h1.header {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+    color: #000000;
+    margin-bottom: 22px;
+
+    @include tablet-large() {
+        margin-bottom: 30px;
+        font-size: 45px;
+        line-height: 59px;
+    }
+}
+
+.sub-title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: #607E82;
+    max-width: 784px;
+    margin: 0 auto;
+
+    @include tablet-large() {
+        font-size: 20px;
+    }
+}
+
+.text-grid {
+    max-width: 784px;
+    margin: 0 auto;
+}
+
 .heb {
     direction: rtl;
 }

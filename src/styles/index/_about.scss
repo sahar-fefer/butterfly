@@ -1,4 +1,4 @@
-@import '../variables';
+@import '../general';
 
 .about {
     text-align: center;
@@ -12,7 +12,7 @@
         margin-bottom: -278px;
     }
 
-    .sub-title {
+    .small-title {
         font-weight: 600;
         font-size: 14px;
         line-height: 18px;
@@ -39,21 +39,15 @@
         }
     }
 
-    .info {
-        margin: 0 auto 40px;
+    .sub-title {
+        margin-bottom: 40px;
         padding: 0 $side-space;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 150%;
-        color: $regular-gray;
-        max-width: 784px;
 
         br {
             display: none;
         }
 
         @include tablet-large() {
-            // margin: 0 auto 56px;
             margin-bottom: 56px;
             font-size: 20px;
             padding: 0;

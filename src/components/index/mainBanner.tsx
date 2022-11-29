@@ -19,7 +19,7 @@ function MainBanner(props: Props) {
             <div className="inner-text">
                 <h1>עומר השארת לנו מתנה,<br />
                     אנחנו מעבירות אותה הלאה</h1>
-                <div className="sub-title">עזרת לנו לראות, אנחנו נמשיך להפיץ את אורך, <br />טוב ליבך ושמחת החיים שלך.</div>
+                <div className="main-sub-title">עזרת לנו לראות, אנחנו נמשיך להפיץ את אורך, <br />טוב ליבך ושמחת החיים שלך.</div>
                 <div className="ctas">
                     <Link to="/donate" className="donate-button"><DonateHart color='black' />לתרומה</Link>
                     <Link to="/donate" className="volunteer">להתנדבות</Link>

@@ -1,31 +1,65 @@
-@import '../variables';
+@import '../general';
 
 .donate-page {
-    margin: 50px auto;
-    max-width: 85vw;
+    text-align: center;
+    margin: 50px $side-space 30px;
 
-    h1 {
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 39px;
-        color: #0D1F2D;
-        margin-bottom: 20px;
+    @include tablet-large {
+        margin: 74px $side-space 76px;
+    }
 
-        @include desktop {
-            font-size: 45px;
-            line-height: 59px;
-        }
+    @include desktop {
+        // margin: 74px auto 76px;
+        max-width: 1190px;
     }
 
     .sub-title {
-        font-weight: 400;
-        font-size: 25px;
-        line-height: 30px;
-        color: #0D1F2D;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
 
-        @include desktop {
-            font-size: 35px;
-            line-height: 49px;
+    .donates-gride {
+        margin: 45px 15px;
+    }
+
+    .donate-cell {
+        border-top: 1px solid #CDCDCD;
+        margin-top: 30px;
+        padding-top: 30px;
+
+        &:first-child {
+            border-top: 0;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        img {
+            width: 110px;
+            height: 110px;
+
+            &.square {
+                border: 1px solid #FFE1E2;
+            }
+
+            &.circle {
+                border-radius: 50%;
+            }
+        }
+
+        .name {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 150%;
+            color: #000000;
+            margin: 20px 0 12px;
+        }
+
+        .about-donate {
+            font-size: 16px;
+            line-height: 29px;
+            text-align: center;
+            color: #607E82;
         }
     }
+
 }

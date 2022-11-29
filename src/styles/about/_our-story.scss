@@ -1,4 +1,4 @@
-@import '../variables';
+@import '../general';
 
 .our-story {
     text-align: center;
@@ -13,36 +13,10 @@
         max-width: 1190px;
     }
 
-    h2 {
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 39px;
-        color: #000000;
-        margin-bottom: 22px;
-
-        @include tablet-large() {
-            margin-bottom: 30px;
-            font-size: 45px;
-            line-height: 59px;
-        }
-    }
-
     p {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 150%;
+        font-size: 16px;
+        line-height: 29px;
         color: #607E82;
-        text-align: start;
-        max-width: 784px;
-        margin: 0 auto;
-
-        &:first-of-type {
-            text-align: center;
-        }
-
-        @include tablet-large() {
-            font-size: 20px;
-        }
     }
 
     .images-wrapper {
