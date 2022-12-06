@@ -37,6 +37,34 @@
   }
 }
 
+.red-button {
+  height: 54px;
+  background-color: #FF121C;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  width: 180px;
+}
+
+.red-button:hover {
+  background-color: #E9111B;
+}
+
+.red-button.regular {
+  width: 218px;
+}
+
 :root {
   --side-space: 15px;
 }
@@ -74,6 +102,34 @@
     display: -ms-grid;
     display: grid;
   }
+}
+
+.red-button {
+  height: 54px;
+  background-color: #FF121C;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  width: 180px;
+}
+
+.red-button:hover {
+  background-color: #E9111B;
+}
+
+.red-button.regular {
+  width: 218px;
 }
 
 .contact-us {
@@ -214,6 +270,34 @@
   }
 }
 
+.red-button {
+  height: 54px;
+  background-color: #FF121C;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  width: 180px;
+}
+
+.red-button:hover {
+  background-color: #E9111B;
+}
+
+.red-button.regular {
+  width: 218px;
+}
+
 .form {
   max-width: 478px;
   padding: 50px 0;
@@ -227,9 +311,10 @@
   }
 }
 
-.form button,
+.form .dropdown-button,
 .form input,
 .form textarea,
+.form .submit,
 .form ul {
   width: 100%;
   max-width: 478px;
@@ -238,7 +323,7 @@
   border: 2px solid #FFE1E2;
   border-radius: 1px;
   padding: 15px 20px 15px 21px;
-  margin-top: 10px;
+  margin-top: 7px;
   font-family: 'Assistant';
   font-weight: 400;
   font-size: 16px;
@@ -249,27 +334,30 @@
 }
 
 @media (min-width: 1280px) {
-  .form button,
+  .form .dropdown-button,
   .form input,
   .form textarea,
+  .form .submit,
   .form ul {
     font-size: 18px;
     line-height: 24px;
   }
 }
 
-.form button:focus,
+.form .dropdown-button:focus,
 .form input:focus,
 .form textarea:focus,
+.form .submit:focus,
 .form ul:focus {
   outline: none;
   -webkit-box-shadow: 0px 0px 8px 2px rgba(255, 225, 226, 0.7);
           box-shadow: 0px 0px 8px 2px rgba(255, 225, 226, 0.7);
 }
 
-.form button:first-child,
+.form .dropdown-button:first-child,
 .form input:first-child,
 .form textarea:first-child,
+.form .submit:first-child,
 .form ul:first-child {
   margin-top: 0;
 }
@@ -277,6 +365,7 @@
 .form textarea {
   height: 165px;
   resize: none;
+  display: flow-root;
 }
 
 .form .submit {
@@ -285,7 +374,18 @@
   color: #FFFFFF;
   background: rgba(255, 18, 28, 0.9);
   border: 2px solid #FF121C;
+  display: block;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
 }
 
 @media (min-width: 1280px) {
@@ -293,6 +393,90 @@
     font-size: 16px;
     line-height: 21px;
     width: 218px;
+  }
+}
+
+.form .submit.loading {
+  cursor: wait;
+}
+
+.form .submit.loading .text {
+  display: none;
+}
+
+.form .submit.loading .loader {
+  width: 18px;
+  height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: spin 1s infinite forwards linear;
+          animation: spin 1s infinite forwards linear;
+}
+
+.form .submit.loading .loader::after {
+  content: "";
+  width: 18px;
+  height: 9px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border: 2px solid white;
+  border-bottom: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: auto;
+}
+
+.form .submit.submitted {
+  cursor: none;
+  pointer-events: none;
+}
+
+.form .submit.submitted .text {
+  display: none;
+}
+
+.form .submit.submitted .send {
+  stroke-dashoffset: 0;
+}
+
+.form .submit .send {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.2s ease 0.2s;
+  transition: all 0.2s ease 0.2s;
+  width: 16px;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  to {
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  to {
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
   }
 }
 
@@ -323,15 +507,21 @@
   border-top: 0px;
 }
 
+@media (min-width: 1280px) {
+  .form .dropdown.active ul {
+    height: 178px;
+  }
+}
+
 .form .dropdown svg,
-.form .dropdown button,
+.form .dropdown .dropdown-button,
 .form .dropdown ul,
 .form .dropdown li {
   -webkit-transition: all 0.2s cubic-bezier(0.78, 0.18, 0.31, 1.08);
   transition: all 0.2s cubic-bezier(0.78, 0.18, 0.31, 1.08);
 }
 
-.form .dropdown button {
+.form .dropdown .dropdown-button {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -374,6 +564,15 @@
 
 .form .dropdown li:hover {
   color: #4d4d4d;
+}
+
+.form .err {
+  font-size: 14px;
+  color: #FF121C;
+  margin: 3px 8px;
+  margin-bottom: 0;
+  display: inline-block;
+  height: 0;
 }
 
 .contact-wrapper {

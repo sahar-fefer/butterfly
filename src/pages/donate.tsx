@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect, useRef } from "react"
 import "../styles/donate/index.scss"
 
 import Layout from "../components/layout"
@@ -9,7 +9,71 @@ import Avatar from "../images/avatar-donates.jpg"
 
 //  markup
 const Donate = () => {
+  // const allCellsTitles = document.querySelectorAll('.donate-cell .name')
+  // console.log('allCellsTitles', allCellsTitles);
+  // useEffect(() => {
+  // }, [allCellsTitles])
 
+  // const nameHeightRef = useRef(null)
+  // console.log('nameHeightRef', nameHeightRef);
+
+  // let shortSection;
+  // if (nameHeightRef.current.clientHeight > 42) 
+  //   shortSection = true
+
+  const donatedList = [
+    {
+      imgName: SimpleWood,
+      imgShape: 'square',
+      imgAlt: 'סימפלי ווד- רשת חנויות ריהוט לבית',
+      name: 'דני וגיא יאברי מסימפלי ווד',
+      about: 'רשת חנויות ריהוט לבית מלווים את הבית של עומר משלב הקמתו. עזרו לנו להפוך קירות לבית. ספות וכורסאות רכות ומפנקות, שולחן אוכל גדול, כסאות נוחים וצבעוניים, שולחן עבודה ובעיקר לא שמענו מהם אף פעם שאי אפשר. תמיד מוצאים את הדרך לומר כן.'
+    },
+    {
+      imgName: Riviera,
+      imgShape: 'square',
+      imgAlt: 'אורי סגרה וכל החברים בארונות רביירה',
+      name: 'אורי סגרה וכל החברים בארונות רביירה',
+      about: 'מה היינו עושות בלעדיכם? הבגדים של בנות הבית (ויש לנו לא מעט...) מסודרים בארונות קיר לבנים, מרווחים שנבנו לנו ברביירה במיוחד לפי מידה. הובלתם והרכבתם לנו ארון בכל חדר וחדר כשהקמנו את הבית וגם כשעברנו לבית חדש, תמיד בחיוך ובשמחה.',
+      short: true
+    },
+    {
+      imgName: Polyron,
+      imgShape: 'square',
+      imgAlt: 'קובי והחברים.ות מפולירון',
+      name: 'קובי והחברים.ות מפולירון',
+      about: 'בזכותם כל בנות הבית ישנות טוב בלילה על מיטות ומזרנים משובחים של פולירון. גם את הבוגרות שלנו שיוצאות לחיים עצמאיים, פולירון יודעים לפנק ברוחב לב. תמיד שם. מחכים שנבקש.'
+    },
+    {
+      imgName: Avatar,
+      imgShape: 'circle',
+      imgAlt: 'גיל רמון אדריכלות נוף, תכנון והקמת גינות',
+      name: 'גיל רמון אדריכלות נוף, תכנון והקמת גינות',
+      about: 'גיל גנן של נשמה. מתנדב סידרתי. יום אחד הופיע פתאום ולקח את הגינה שלנו תחת חסותו. בשקט ובהתמדה, בחום ובקור, דואג לנו לפרחים צבעוניים ומשמחים, לדשא בריא ומכוסח היטב, לצמחי תבלין, שותל, מטפח, מרחיק עשבים ועושה את הגינה ואותנו שמחות.',
+      short: true
+    },
+    {
+      imgName: Avatar,
+      imgShape: 'circle',
+      imgAlt: 'אורנה דר',
+      name: 'אורנה דר',
+      about: 'למעלה מארבע שנים, כל שבוע בלי לפספס, אורנה שלנו מופיעה בכל יום שישי עם חלה לשבת, עוגה, פירות או הפתעה טעימה אחרת, מניחה במטבח, משאירה גם חיוך רחב, ויוצאת. כמו פיה טובה. וכולנו יודעות שהיא שם בשבילנו לכל צורך שיעלה פתאום. כל בית צריך אורנה.'
+    },
+    {
+      imgName: Avatar,
+      imgShape: 'circle',
+      imgAlt: 'אפרת כהן',
+      name: 'אפרת כהן',
+      about: 'אנחנו אוהבות לקרוא לה "המפקדת" 😊 אפרת אחראית, מרימה, מפיקה ומתכללת את כל ארוע המכירה השנתי "מתלבשות על הבית של עומר", מרחפת כמו פייה לפני, בארוע ואחרי, במגע של קסם וחיוך פתאום הכל קורה ומסתדר, לא מובן מאליו החיבור שלה לבית, היכולות המדהימות והנתינה הבלתי סופית. ובין מכירה למכירה היא תמיד איתנו לכל מה שנדרש. מלווה צעירות אשר מסיימות את שהותן בבית, דואגת שהמעבר יעבור בקלות ולכל מה שזקוקות בבית החדש, מנטורית לחיים עבורן, וגם עבורינו.'
+    },
+    {
+      imgName: Avatar,
+      imgShape: 'circle',
+      imgAlt: 'יפית סלע',
+      name: 'יפית סלע',
+      about: 'ליפית יש בוטיק בגדים מהמם בהוד השרון, פעמיים בשנה היא מסמסת בשקט וצנעה ורק שואלת: כמה בנות בבית? לפי מספר הבנות, היא מכינה לכל אחת מהן שקית מפנקת של פרטי לבוש חדשים ישר מהחנות, שקית מלאה בטוב, נדיבות וחיוך ענק.'
+    }
+  ]
   return (
     <Layout>
       <div className="donate-page">
@@ -18,62 +82,40 @@ const Donate = () => {
           לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו סתשם השמה - לתכי מורגם בורק? לתיג ישבעס.
         </div>
         <div className="donates-gride">
-          <div className="donate-cell">
-            <img className="square" src={SimpleWood} alt="" />
-            <div className="name">דני וגיא יאברי מסימפלי ווד</div>
-            <div className="about-donate">רשת חנויות ריהוט לבית מלווים את הבית של עומר משלב הקמתו. עזרו לנו להפוך קירות לבית. ספות וכורסאות רכות ומפנקות, שולחן אוכל גדול, כסאות נוחים וצבעוניים, שולחן עבודה ובעיקר לא שמענו מהם אף פעם שאי אפשר. תמיד מוצאים את הדרך לומר כן.</div>
+          {
+            donatedList.map((details, i) => {
+              return (
+                <div className="donate-cell" key={i}>
+                  <img className={details.imgShape} src={details.imgName} alt={details.imgAlt} />
+                  <div className="info">
+                    <div className="name">
+                      {details.name}
+                    </div>
+                    <div className={`about-donate ${details.short && 'short'}`}>
+                      <div className={`text ${details.short && 'short'}`}>
+                        {details.about}
+                      </div>
+                      {
+                        details.short &&
+                        <span>
+                          ...&nbsp;
+                          <button>להמשך קריאה</button>
+                        </span>
+                      }
+                    </div>
+                  </div>
+                </div>
+              )
+            })
+          }
+        </div>
+        <div className="donate-banner">
+          <img src="" alt="" />
+          <h3>רוצים לקחת חלק?</h3>
+          <div className="sub-header">
+            לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם גדדיש.
           </div>
-          <div className="donate-cell">
-            <img className="square" src={Riviera} alt="" />
-            <div className="name">אורי סגרה והחברים בארונות רביירה</div>
-            <div className="about-donate">מה היינו עושות בלעדיכם? הבגדים של בנות הבית (ויש לנו לא מעט...) מסודרים בארונות קיר לבנים, מרווחים שנבנו לנו ברביירה במיוחד לפי מידה. הובלתם והרכבתם לנו ארון בכי...</div>
-          </div>
-          <div className="donate-cell">
-            <img className="square" src={Polyron} alt="" />
-            <div className="name">קובי והחברים.ות מפולירון</div>
-            <div className="about-donate">בזכותם כל בנות הבית ישנות טוב בלילה על מיטות ומזרנים משובחים של פולירון. גם את הבוגרות שלנו שיוצאות לחיים עצמאיים, פולירון יודעים לפנק ברוחב לב. תמיד שם. מחכים שנבקש.</div>
-          </div>
-          <div className="donate-cell">
-            <img className="circle" src={Avatar} alt="" />
-            <div className="name">גיל רמון אדריכלות נוף, תכנון והקמת גינות</div>
-            <div className="about-donate">
-              גיל גנן של נשמה. מתנדב סידרתי. יום אחד הופיע פתאום ולקח את הגינה שלנו תחת חסותו. בשקט ובהתמדה, בחום ובקור, דואג לנו לפרחים צבעוניים ומשמחים, לדשא בריא ומכוסח...
-            </div>
-          </div>
-          <div className="donate-cell">
-            <img className="circle" src={Avatar} alt="" />
-            <div className="name">גיל רמון אדריכלות נוף, תכנון והקמת גינות</div>
-            <div className="about-donate">
-              גיל גנן של נשמה. מתנדב סידרתי. יום אחד הופיע פתאום ולקח את הגינה שלנו תחת חסותו. בשקט ובהתמדה, בחום ובקור, דואג לנו לפרחים צבעוניים ומשמחים, לדשא בריא ומכוסח...
-            </div>
-          </div>
-          <div className="donate-cell">
-            <img className="circle" src={Avatar} alt="" />
-            <div className="name">
-              אורנה דר
-            </div>
-            <div className="about-donate">
-              למעלה מארבע שנים, כל שבוע בלי לפספס, אורנה שלנו מופיעה בכל יום שישי עם חלה לשבת, עוגה, פירות או הפתעה טעימה אחרת, מניחה במטבח, משאירה גם חיוך רחב, ויוצאת. כמו פיה טובה. וכולנו יודעות שהיא שם בשבילנו לכל צורך שיעלה פתאום. כל בית צריך אורנה.
-            </div>
-          </div>
-          <div className="donate-cell">
-            <img className="circle" src={Avatar} alt="" />
-            <div className="name">
-              אפרת כהן
-            </div>
-            <div className="about-donate">
-              קראו עוד אוהבות לקרוא לה "המפקדת" 😊 אפרת אחראית, מרימה, מפיקה ומתכללת את כל ארוע המכירה השנתי "מתלבשות על הבית של עומר", מרחפת כמו פייה לפני, בארוע ואחרי, במגע של קסם וחיוך פתאום הכל קורה ומסתדר, לא מובן מאליו החיבור שלה לבית, היכולות המדהימות והנתינה הבלתי סופית. ובין מכ...
-            </div>
-          </div>
-          <div className="donate-cell">
-            <img className="circle" src={Avatar} alt="" />
-            <div className="name">
-              יפית סלע
-            </div>
-            <div className="about-donate">
-              יפית יש בוטיק בגדים מהמם בהוד השרון, פעמיים בשנה היא מסמסת בשקט וצנעה ורק שואלת: כמה בנות בבית? לפי מספר הבנות, היא מכינה לכל אחת מהן שקית מפנקת של פרטי לבוש חדשים ישר מהחנות, שקית מלאה בטוב, נדיבות וחיוך ענק.
-            </div>
-          </div>
+          <div className="red-button">להתנדבות</div>
         </div>
       </div>
     </Layout>

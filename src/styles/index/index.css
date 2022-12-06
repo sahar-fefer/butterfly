@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
 :root {
   --side-space: 15px;
 }
@@ -37,6 +38,236 @@
   }
 }
 
+.red-button {
+  height: 54px;
+  background-color: #FF121C;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  width: 180px;
+}
+
+.red-button:hover {
+  background-color: #E9111B;
+}
+
+.red-button.regular {
+  width: 218px;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+  font-family: 'Assistant', sans-serif;
+}
+
+body * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer,
+header,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: inherit;
+  background: transparent;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+}
+
+h1.header {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  color: #000000;
+  margin-bottom: 22px;
+}
+
+@media (min-width: 1024px) {
+  h1.header {
+    margin-bottom: 30px;
+    font-size: 45px;
+    line-height: 59px;
+  }
+}
+
+.sub-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  color: #607E82;
+  max-width: 784px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .sub-title {
+    font-size: 20px;
+  }
+}
+
+.text-grid {
+  max-width: 784px;
+  margin: 0 auto;
+}
+
+.heb {
+  direction: rtl;
+}
+
+.eng {
+  direction: ltr;
+}
+
+.fill-page {
+  position: absolute;
+  inset: 0;
+  top: 70px;
+}
+
+@media (min-width: 1280px) {
+  .fill-page {
+    top: 87px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fill-page {
+    top: 77px;
+  }
+}
+
+.fill-page ~ footer {
+  position: absolute;
+  bottom: 0;
+}
+
+@media (min-width: 1280px) {
+  .desktop-fill-page {
+    position: absolute;
+    inset: 0;
+    top: 87px;
+  }
+  .desktop-fill-page ~ footer {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
 .about {
   text-align: center;
   margin: 50px 0;
@@ -54,7 +285,7 @@
   }
 }
 
-.about .sub-title {
+.about .small-title {
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
@@ -63,7 +294,7 @@
 }
 
 @media (min-width: 1024px) {
-  .about .sub-title {
+  .about .small-title {
     font-size: 16px;
     line-height: 21px;
   }
@@ -85,27 +316,22 @@
   }
 }
 
-.about .info {
-  margin: 0 auto 40px;
+.about .sub-title {
+  margin-bottom: 40px;
   padding: 0 var(--side-space);
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 150%;
-  color: #607E82;
-  max-width: 784px;
 }
 
-.about .info br {
+.about .sub-title br {
   display: none;
 }
 
 @media (min-width: 1024px) {
-  .about .info {
+  .about .sub-title {
     margin-bottom: 56px;
     font-size: 20px;
     padding: 0;
   }
-  .about .info br {
+  .about .sub-title br {
     display: block;
   }
 }
@@ -284,6 +510,34 @@
   }
 }
 
+.red-button {
+  height: 54px;
+  background-color: #FF121C;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  width: 180px;
+}
+
+.red-button:hover {
+  background-color: #E9111B;
+}
+
+.red-button.regular {
+  width: 218px;
+}
+
 .main-banner {
   color: white;
   position: relative;
@@ -342,7 +596,7 @@
   }
 }
 
-.main-banner .sub-title {
+.main-banner .main-sub-title {
   margin: 10px 0 30px;
   font-weight: 400;
   font-size: 18px;
@@ -350,12 +604,12 @@
 }
 
 @media (min-width: 1024px) {
-  .main-banner .sub-title {
+  .main-banner .main-sub-title {
     margin: 12px 0 32px;
     font-size: 18px;
     line-height: 24px;
   }
-  .main-banner .sub-title br {
+  .main-banner .main-sub-title br {
     display: none;
   }
 }
@@ -453,6 +707,34 @@
   }
 }
 
+.red-button {
+  height: 54px;
+  background-color: #FF121C;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  width: 180px;
+}
+
+.red-button:hover {
+  background-color: #E9111B;
+}
+
+.red-button.regular {
+  width: 218px;
+}
+
 :root {
   --side-space: 15px;
 }
@@ -490,6 +772,34 @@
     display: -ms-grid;
     display: grid;
   }
+}
+
+.red-button {
+  height: 54px;
+  background-color: #FF121C;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  width: 180px;
+}
+
+.red-button:hover {
+  background-color: #E9111B;
+}
+
+.red-button.regular {
+  width: 218px;
 }
 
 .accordion {

@@ -5,37 +5,76 @@
     margin: 50px $side-space 30px;
 
     @include tablet-large {
-        margin: 74px $side-space 76px;
+        margin: 74px $side-space 50px;
     }
 
     @include desktop {
-        // margin: 74px auto 76px;
         max-width: 1190px;
     }
 
     .sub-title {
-        margin-right: 15px;
-        margin-left: 15px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin: 0 auto;
+
+        @include tablet-large {
+            padding: 0;
+        }
     }
 
     .donates-gride {
         margin: 45px 15px;
+
+        @include tablet-large {
+            margin: 30px 0 97px;
+            display: grid;
+            // grid-template-columns: 598px 595px;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     .donate-cell {
-        border-top: 1px solid #CDCDCD;
-        margin-top: 30px;
-        padding-top: 30px;
+        border-bottom: 1px solid #CDCDCD;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
 
-        &:first-child {
-            border-top: 0;
-            margin-top: 0;
-            padding-top: 0;
+        @include tablet-large {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+
+            &:nth-child(even) {
+                padding-right: 33px;
+                // max-width: 595px;
+            }
+
+            &:nth-child(odd) {
+                // max-width: 598px;
+
+                .info {
+                    border-left: 1px solid #CDCDCD;
+                    padding-left: 36px;
+                }
+            }
+        }
+
+
+        &:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
 
         img {
             width: 110px;
             height: 110px;
+
+            @include tablet-large {
+                width: 138px;
+                height: 138px;
+            }
 
             &.square {
                 border: 1px solid #FFE1E2;
@@ -46,20 +85,108 @@
             }
         }
 
+        .info {
+            text-align: center;
+
+            @include tablet-large {
+                margin-top: auto;
+                margin-bottom: auto;
+                text-align: start;
+
+
+                // height: 236px;
+                // overflow: hidden;
+                // /* white-space: nowrap; */
+                // text-overflow: ellipsis;
+                // height: 178px;
+            }
+        }
+
         .name {
             font-weight: 600;
             font-size: 28px;
             line-height: 150%;
             color: #000000;
             margin: 20px 0 12px;
+
+            @include tablet-large {
+                font-size: 32px;
+                line-height: 42px;
+            }
         }
 
         .about-donate {
             font-size: 16px;
             line-height: 29px;
-            text-align: center;
             color: #607E82;
+
+            @include tablet-large {
+                line-height: 150%;
+                height: 120px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                &.short {
+                    height: 72px;
+                }
+            }
+
+            // @include tablet-large {
+            //     .text {
+            //         height: 120px;
+            //         overflow: hidden;
+            //         text-overflow: ellipsis;
+
+            //         &.short {
+            //             height: 72px;
+            //         }
+            //     }
+            // }
+
+            button {
+                font-weight: 600;
+                line-height: 150%;
+                color: #FF121C;
+            }
         }
     }
 
+    .donate-banner {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        justify-content: center;
+        align-items: center;
+        color: #FFFFFF;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../images/donate-banner.jpg');
+        background-size: cover;
+        // padding: 56px 25px;
+        height: 338px;
+
+        @include tablet-large {
+            height: 438px;
+            gap: 30px;
+        }
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 31px;
+
+        @include tablet-large {
+            font-size: 32px;
+            line-height: 42px;
+        }
+    }
+
+    .sub-header {
+        font-size: 20px;
+        line-height: 150%;
+        max-width: 784px;
+
+        @include tablet-large {
+            font-size: 16px;
+        }
+    }
 }

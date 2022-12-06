@@ -93,3 +93,25 @@ $black: #000000;
         display: grid;
     }
 }
+
+.red-button {
+    height: 54px;
+    background-color: $red;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    width: 180px;
+
+    &:hover {
+        background-color: $dark-red;
+    }
+
+    &.regular {
+        width: 218px;
+    }
+}
