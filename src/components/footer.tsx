@@ -24,7 +24,6 @@ export default () => {
                     <div className="group">
                         <div className="title">מידע</div>
                         <Link to='/about' onClick={resetNav}>אודות</Link>
-                        <Link to='/events' onClick={resetNav}>אירועים</Link>
                         <a href="https://www.websiteplanet.com/he/blog/%D7%94%D7%AA%D7%90%D7%99%D7%9E%D7%95-%D7%90%D7%AA-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%A9%D7%9C%D7%9B%D7%9D-%D7%9C-gdpr/" target="_blank">
                             מדיניות פרטיות
                         </a>

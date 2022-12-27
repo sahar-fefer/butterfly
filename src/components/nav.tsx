@@ -74,11 +74,6 @@ function Nav(props: Props) {
                         activeClassName="active">
                         צמידים
                     </Link>
-                    <Link to='/events'
-                        partiallyActive={true}
-                        activeClassName="active">
-                        אירועים
-                    </Link>
                     <Link to='/donate'
                         className={'donate'}
                         partiallyActive={true}
