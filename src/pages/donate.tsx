@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useState } from "react"
 import "../styles/donate/index.scss"
 
 import Layout from "../components/layout"
@@ -9,17 +9,19 @@ import Avatar from "../images/avatar-donates.jpg"
 
 //  markup
 const Donate = () => {
-  // const allCellsTitles = document.querySelectorAll('.donate-cell .name')
-  // console.log('allCellsTitles', allCellsTitles);
-  // useEffect(() => {
-  // }, [allCellsTitles])
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1280);
 
-  // const nameHeightRef = useRef(null)
-  // console.log('nameHeightRef', nameHeightRef);
+  useEffect(() => {
+    function handleWindowResize() {
+      setIsDesktop(window.innerWidth >= 1280);
+    }
 
-  // let shortSection;
-  // if (nameHeightRef.current.clientHeight > 42) 
-  //   shortSection = true
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
 
   const donatedList = [
     {
@@ -34,7 +36,8 @@ const Donate = () => {
       imgShape: 'square',
       imgAlt: 'אורי סגרה וכל החברים בארונות רביירה',
       name: 'אורי סגרה וכל החברים בארונות רביירה',
-      about: 'מה היינו עושות בלעדיכם? הבגדים של בנות הבית (ויש לנו לא מעט...) מסודרים בארונות קיר לבנים, מרווחים שנבנו לנו ברביירה במיוחד לפי מידה. הובלתם והרכבתם לנו ארון בכל חדר וחדר כשהקמנו את הבית וגם כשעברנו לבית חדש, תמיד בחיוך ובשמחה.',
+      about: 'מה היינו עושות בלעדיכם? הבגדים של בנות הבית (ויש לנו לא מעט...) מסודרים בארונות קיר לבנים, מרווחים שנבנו לנו ברביירה במיוחד לפי מידה. הובלתם והרכבתם לנו ארון בכ',
+      about2: 'ל חדר וחדר כשהקמנו את הבית וגם כשעברנו לבית חדש, תמיד בחיוך ובשמחה',
       short: true
     },
     {
@@ -49,7 +52,8 @@ const Donate = () => {
       imgShape: 'circle',
       imgAlt: 'גיל רמון אדריכלות נוף, תכנון והקמת גינות',
       name: 'גיל רמון אדריכלות נוף, תכנון והקמת גינות',
-      about: 'גיל גנן של נשמה. מתנדב סידרתי. יום אחד הופיע פתאום ולקח את הגינה שלנו תחת חסותו. בשקט ובהתמדה, בחום ובקור, דואג לנו לפרחים צבעוניים ומשמחים, לדשא בריא ומכוסח היטב, לצמחי תבלין, שותל, מטפח, מרחיק עשבים ועושה את הגינה ואותנו שמחות.',
+      about: 'גיל גנן של נשמה. מתנדב סידרתי. יום אחד הופיע פתאום ולקח את הגינה שלנו תחת חסותו. בשקט ובהתמדה, בחום ובקור, דואג לנו לפרחים צבעוניים ומשמחים, לדשא בריא ומכוסח',
+      about2: ' היטב, לצמחי תבלין, שותל, מטפח, מרחיק עשבים ועושה את הגינה ואותנו שמחות.',
       short: true
     },
     {
@@ -64,7 +68,9 @@ const Donate = () => {
       imgShape: 'circle',
       imgAlt: 'אפרת כהן',
       name: 'אפרת כהן',
-      about: 'אנחנו אוהבות לקרוא לה "המפקדת" 😊 אפרת אחראית, מרימה, מפיקה ומתכללת את כל ארוע המכירה השנתי "מתלבשות על הבית של עומר", מרחפת כמו פייה לפני, בארוע ואחרי, במגע של קסם וחיוך פתאום הכל קורה ומסתדר, לא מובן מאליו החיבור שלה לבית, היכולות המדהימות והנתינה הבלתי סופית. ובין מכירה למכירה היא תמיד איתנו לכל מה שנדרש. מלווה צעירות אשר מסיימות את שהותן בבית, דואגת שהמעבר יעבור בקלות ולכל מה שזקוקות בבית החדש, מנטורית לחיים עבורן, וגם עבורינו.'
+      about: 'אנחנו אוהבות לקרוא לה "המפקדת" 😊 אפרת אחראית, מרימה, מפיקה ומתכללת את כל ארוע המכירה השנתי "מתלבשות על הבית של עומר", מרחפת כמו פייה לפני, בארוע ואחרי, במגע של קסם וחיוך פתאום הכל קורה ומסתדר, לא מובן מאליו החיבור שלה לבית, היכולות המדהימות והנתינה הבלתי סופית. ובין מכ',
+      about2: 'ירה למכירה היא תמיד איתנו לכל מה שנדרש. מלווה צעירות אשר מסיימות את שהותן בבית, דואגת שהמעבר יעבור בקלות ולכל מה שזקוקות בבית החדש, מנטורית לחיים עבורן, וגם עבורינו.',
+      short: true
     },
     {
       imgName: Avatar,
@@ -74,6 +80,12 @@ const Donate = () => {
       about: 'ליפית יש בוטיק בגדים מהמם בהוד השרון, פעמיים בשנה היא מסמסת בשקט וצנעה ורק שואלת: כמה בנות בבית? לפי מספר הבנות, היא מכינה לכל אחת מהן שקית מפנקת של פרטי לבוש חדשים ישר מהחנות, שקית מלאה בטוב, נדיבות וחיוך ענק.'
     }
   ]
+
+  const onReadMore = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
+    const parent: HTMLElement | null = e.currentTarget.closest('.about-donate')
+    parent && parent.classList.add('read-more-open')
+  }
+
   return (
     <Layout>
       <div className="donate-page">
@@ -91,16 +103,19 @@ const Donate = () => {
                     <div className="name">
                       {details.name}
                     </div>
-                    <div className={`about-donate ${details.short && 'short'}`}>
-                      <div className={`text ${details.short && 'short'}`}>
-                        {details.about}
-                      </div>
-                      {
-                        details.short &&
+                    <div className={`about-donate`}>
+                      {details.about}
+                      {details.about2 && isDesktop
+                        ?
                         <span>
-                          ...&nbsp;
-                          <button>להמשך קריאה</button>
+                          <span className="dots">...</span>
+                          <span className="about2">{details.about2}</span>
+                          <span className="read-more" onClick={(event) => onReadMore(event)}>
+                            <button>להמשך קריאה</button>
+                          </span>
                         </span>
+                        :
+                        <span>{details.about2}</span>
                       }
                     </div>
                   </div>
