@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkbutterfly=self.webpackChunkbutterfly||[]).push([[454],{9038:function(e,t,l){l.r(t);var a=l(7294),n=l(4249);t.default=function(){return a.createElement(n.Z,null,a.createElement("div",{className:"bracelets fill-page"},a.createElement("h1",null,"צמידים"),a.createElement("div",{className:"sub-title"},"העמוד יעלה בקרוב...")))}}}]);
-//# sourceMappingURL=component---src-pages-bracelets-tsx-d07e2b371b6a21e59439.js.map
