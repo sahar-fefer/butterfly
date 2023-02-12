@@ -211,6 +211,11 @@ video {
   background: transparent;
 }
 
+html {
+  line-height: 1;
+  font-family: 'Assistant', sans-serif;
+}
+
 body {
   line-height: 1;
   font-family: 'Assistant', sans-serif;
@@ -229,6 +234,10 @@ section {
 
 nav ul {
   list-style: none;
+}
+
+img {
+  background: #F7F7F7;
 }
 
 a {

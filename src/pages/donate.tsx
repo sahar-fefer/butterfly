@@ -98,7 +98,7 @@ const Donate = () => {
             donatedList.map((details, i) => {
               return (
                 <div className="donate-cell" key={i}>
-                  <img className={details.imgShape} src={details.imgName} alt={details.imgAlt} />
+                  <img loading='lazy' className={details.imgShape} src={details.imgName} alt={details.imgAlt} />
                   <div className="info">
                     <div className="name">
                       {details.name}
@@ -125,7 +125,6 @@ const Donate = () => {
           }
         </div>
         <div className="donate-banner">
-          <img src="" alt="" />
           <h3>רוצים לקחת חלק?</h3>
           <div className="sub-header">
             לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם גדדיש.

@@ -65,10 +65,14 @@
         }
 
         img {
+            min-width: 110px;
+            min-height: 110px;
             width: 110px;
             height: 110px;
 
             @include desktop {
+                min-width: 138px;
+                min-height: 138px;
                 width: 138px;
                 height: 138px;
                 margin-top: 40px;

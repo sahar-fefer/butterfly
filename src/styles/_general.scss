@@ -79,12 +79,21 @@ video {
     background: transparent;
 }
 
+html {
+    line-height: 1;
+    font-family: 'Assistant', sans-serif;
+    // font-display: swap;
+    // font-display: fallback;
+}
+
 body {
     line-height: 1;
     font-family: 'Assistant', sans-serif;
+    // font-display: swap;
 
     * {
         box-sizing: border-box;
+        // font-display: swap;
     }
 }
 
@@ -96,6 +105,10 @@ section {
 
 nav ul {
     list-style: none;
+}
+
+img {
+    background: #F7F7F7;
 }
 
 a {
