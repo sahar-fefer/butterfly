@@ -1,4 +1,4 @@
-@import '../general';
+@import './general';
 
 .donate-page {
     text-align: center;
@@ -159,7 +159,7 @@
         justify-content: center;
         align-items: center;
         color: #FFFFFF;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../images/donate-banner.jpg');
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/donate-banner.jpg');
         background-size: cover;
         height: 338px;
 

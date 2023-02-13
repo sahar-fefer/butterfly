@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
-import "../styles/donate/index.scss"
+import "../styles/donate.scss"
+// import "../styles/donate.scss"
 
 import Layout from "../components/layout"
 import SimpleWood from "../images/simply-wood-donates.jpg"

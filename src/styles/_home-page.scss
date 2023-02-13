@@ -1,4 +1,106 @@
-@import '../general';
+@import './general';
+@import './variables';
+@import './faq';
+
+.main-banner {
+    color: white;
+    position: relative;
+
+    .banner {
+        width: 100%;
+        height: 433px;
+        object-fit: cover;
+
+        @include tablet-large() {
+            height: 590px;
+        }
+    }
+
+    .inner-text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        bottom: 30px;
+        transform: translateX(-50%);
+
+        @include tablet-large() {
+            align-items: center;
+            bottom: 50%;
+            transform: translate(-50%, 50%);
+        }
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 35px;
+
+        @include tablet-large() {
+            font-size: 45px;
+            line-height: 49px;
+        }
+    }
+
+    .main-sub-title {
+        margin: 10px 0 30px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+
+        @include tablet-large() {
+            margin: 12px 0 32px;
+            font-size: 18px;
+            line-height: 24px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .ctas {
+        display: flex;
+        gap: 12px;
+
+        a {
+            width: 150px;
+            height: 50px;
+            border: 2px solid #ffffff;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 21px;
+            letter-spacing: 0.08em;
+            @include flex-center;
+
+            @include tablet-large() {
+                height: 54px;
+
+            }
+        }
+    }
+
+    .donate-button {
+        transition: all .2s;
+        background: rgba($color: white, $alpha: 0.9);
+        color: $black;
+
+        &:hover {
+            background: white;
+        }
+    }
+
+    .volunteer {
+        transition: all .2s;
+        border: 2px solid rgba(255, 255, 255, 0.6) !important;
+
+        &:hover {
+            background: white;
+            color: black;
+        }
+    }
+}
 
 .about {
     text-align: center;
@@ -156,5 +258,4 @@
             }
         }
     }
-
 }

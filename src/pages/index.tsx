@@ -1,7 +1,7 @@
 import * as React from "react"
 import MainBanner from "../components/index/mainBanner"
 import Faq from "../components/faq"
-import "../styles/index/index.scss"
+import "../styles/home-page.scss"
 import About from "../components/index/about"
 import Layout from "../components/layout"
 
