@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkbutterfly=self.webpackChunkbutterfly||[]).push([[997],{388:function(e,t,l){l.r(t);var u=l(7294),a=l(4249);t.default=function(){return u.createElement(a.ZP,null,u.createElement("div",{className:"omers-house fill-page"},u.createElement("h1",null,"הבית של עומר"),u.createElement("div",{className:"sub-title"},"העמוד יעלה בקרוב...")))}}}]);
+//# sourceMappingURL=component---src-pages-omers-house-tsx-15867eacddbc903147e2.js.map
