@@ -41,12 +41,8 @@
                 object-fit: cover;
                 transition: all .2s;
 
-                &:first-child {
-                    object-position: top;
-                }
-
                 &:last-child {
-                    object-position: bottom;
+                    max-width: 476px;
                 }
             }
         }

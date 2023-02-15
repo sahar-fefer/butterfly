@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Head } from '../pages';
+// import { Head } from '../pages';
 import "../styles/styles.css"
 import Footer from './footer'
 import Nav from './nav'
@@ -21,7 +21,13 @@ export const Layout = (props: Props) => {
 
     return (
         <div className={`${lang === 'EN' ? 'heb' : 'eng'} layout`}>
-            <Head />
+            <meta charSet="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+            <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+            {/* <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="preload" as="style" /> */}
+            {/* <Head /> */}
             <Nav lang={lang} changeLang={changeLang} />
             {children}
             <Footer />
@@ -29,3 +35,16 @@ export const Layout = (props: Props) => {
     )
 }
 export default Layout
+
+
+export const Head = () => {
+    return (
+        <>
+            <meta charSet="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+            <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="preload" as="style" />
+        </>
+    );
+};
