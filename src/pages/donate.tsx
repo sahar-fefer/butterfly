@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import "../styles/donate.scss"
+import "../styles/_donate.scss"
 // import "../styles/donate.scss"
 
 import Layout from "../components/layout"

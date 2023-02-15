@@ -1,5 +1,5 @@
 import * as React from "react"
-import "../styles/omers-house.scss"
+import "../styles/_omers-house.scss"
 
 import Layout from "../components/layout"
 

@@ -1,5 +1,5 @@
 import * as React from "react"
-import "../styles/contact.scss"
+import "../styles/_contact.scss"
 
 import Layout from "../components/layout"
 import ContactUs from "../components/contact/contactUs"

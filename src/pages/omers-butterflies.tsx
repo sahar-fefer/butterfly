@@ -1,5 +1,5 @@
 import * as React from "react"
-import "../styles/omers-butterflies.scss"
+import "../styles/_omers-butterflies.scss"
 
 import Layout from "../components/layout"
 
