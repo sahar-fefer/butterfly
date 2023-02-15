@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
 :root {
   --side-space: 15px;
 }
@@ -240,6 +239,10 @@ img {
   background: #F7F7F7;
 }
 
+b {
+  font-weight: 700;
+}
+
 a {
   margin: 0;
   padding: 0;
@@ -270,6 +273,7 @@ h1.header {
   line-height: 39px;
   color: #000000;
   margin-bottom: 22px;
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
@@ -294,6 +298,16 @@ h1.header {
   .sub-title {
     font-size: 20px;
   }
+}
+
+p {
+  font-size: 16px;
+  line-height: 29px;
+  color: #607E82;
+}
+
+.red {
+  color: #FE2932;
 }
 
 .text-grid {
