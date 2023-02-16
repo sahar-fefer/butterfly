@@ -40,8 +40,10 @@
                 min-height: 416px;
                 object-fit: cover;
                 transition: all .2s;
+            }
 
-                &:last-child {
+            img:last-child {
+                @include tablet-large {
                     max-width: 476px;
                 }
             }
