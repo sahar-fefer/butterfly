@@ -1,192 +1,181 @@
-@import './general';
+@import "./general";
 
 .donate-page {
-    text-align: center;
-    margin: 50px $side-space 30px;
+  text-align: center;
+
+  .sub-title {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
 
     @include desktop {
-        margin: 74px $side-space 50px;
+      padding: 0;
     }
+  }
+
+  .donates-gride {
+    margin: 45px 15px;
 
     @include desktop {
-        max-width: 1190px;
+      margin: 30px 0 97px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
+  }
 
-    .sub-title {
-        padding-right: 15px;
-        padding-left: 15px;
-        margin: 0 auto;
+  .donate-cell {
+    border-bottom: 1px solid #cdcdcd;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
 
-        @include desktop {
-            padding: 0;
-        }
-    }
+    @include desktop {
+      display: flex;
+      align-items: flex-start;
+      gap: 36px;
+      margin-bottom: 50px;
+      padding-bottom: 50px;
 
-    .donates-gride {
-        margin: 45px 15px;
+      &:nth-child(even) {
+        padding-right: 33px;
+      }
 
-        @include desktop {
-            margin: 30px 0 97px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    .donate-cell {
-        border-bottom: 1px solid #CDCDCD;
-        margin-bottom: 30px;
-        padding-bottom: 30px;
-
-        @include desktop {
-            display: flex;
-            align-items: flex-start;
-            gap: 36px;
-            margin-bottom: 50px;
-            padding-bottom: 50px;
-
-            &:nth-child(even) {
-                padding-right: 33px;
-            }
-
-            &:nth-child(odd) {
-
-                .info {
-                    border-left: 1px solid #CDCDCD;
-                    padding-left: 36px;
-                }
-            }
-        }
-
-
-        &:last-child {
-            border-bottom: 0;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        img {
-            min-width: 110px;
-            min-height: 110px;
-            width: 110px;
-            height: 110px;
-
-            @include desktop {
-                min-width: 138px;
-                min-height: 138px;
-                width: 138px;
-                height: 138px;
-                margin-top: 40px;
-            }
-
-            &.square {
-                border: 1px solid #FFE1E2;
-            }
-
-            &.circle {
-                border-radius: 50%;
-            }
-        }
-
+      &:nth-child(odd) {
         .info {
-            text-align: center;
-
-            @include desktop {
-                height: 100%;
-                text-align: start;
-                padding-top: 40px;
-                padding-bottom: 18px;
-            }
+          border-left: 1px solid #cdcdcd;
+          padding-left: 36px;
         }
-
-        .name {
-            font-weight: 600;
-            font-size: 28px;
-            line-height: 150%;
-            color: #000000;
-            margin-bottom: 12px;
-
-            @include desktop {
-                font-size: 32px;
-                line-height: 42px;
-            }
-        }
-
-        .about-donate {
-            font-size: 16px;
-            line-height: 29px;
-            color: #607E82;
-            max-width: 630px;
-            margin: 0 auto;
-
-            @include desktop {
-                line-height: 150%;
-            }
-
-            button {
-                font-weight: 600;
-                line-height: 150%;
-                color: $red;
-            }
-
-            .about2 {
-                display: none;
-            }
-
-            &.read-more-open {
-
-                .dots,
-                .read-more {
-                    display: none;
-                }
-
-                .about2 {
-                    display: inline;
-                }
-            }
-        }
+      }
     }
 
-    .read-more {
-        color: $red;
-        margin: auto 0;
-        margin-right: 4px;
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
 
-    .donate-banner {
-        display: flex;
-        flex-direction: column;
-        gap: 22px;
-        justify-content: center;
-        align-items: center;
-        color: #FFFFFF;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/donate-banner.jpg');
-        background-size: cover;
-        height: 338px;
+    img {
+      min-width: 110px;
+      min-height: 110px;
+      width: 110px;
+      height: 110px;
 
-        @include desktop {
-            height: 438px;
-            gap: 30px;
-        }
+      @include desktop {
+        min-width: 138px;
+        min-height: 138px;
+        width: 138px;
+        height: 138px;
+        margin-top: 40px;
+      }
+
+      &.square {
+        border: 1px solid #ffe1e2;
+      }
+
+      &.circle {
+        border-radius: 50%;
+      }
     }
 
-    h3 {
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 31px;
+    .info {
+      text-align: center;
 
-        @include desktop {
-            font-size: 32px;
-            line-height: 42px;
-        }
+      @include desktop {
+        height: 100%;
+        text-align: start;
+        padding-top: 40px;
+        padding-bottom: 18px;
+      }
     }
 
-    .sub-header {
-        font-size: 20px;
+    .name {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 150%;
+      color: #000000;
+      margin-bottom: 12px;
+
+      @include desktop {
+        font-size: 32px;
+        line-height: 42px;
+      }
+    }
+
+    .about-donate {
+      font-size: 16px;
+      line-height: 29px;
+      color: #607e82;
+      max-width: 630px;
+      margin: 0 auto;
+
+      @include desktop {
         line-height: 150%;
-        max-width: 784px;
+      }
 
-        @include desktop {
-            font-size: 16px;
+      button {
+        font-weight: 600;
+        line-height: 150%;
+        color: $red;
+      }
+
+      .about2 {
+        display: none;
+      }
+
+      &.read-more-open {
+        .dots,
+        .read-more {
+          display: none;
         }
+
+        .about2 {
+          display: inline;
+        }
+      }
     }
+  }
+
+  .read-more {
+    color: $red;
+    margin: auto 0;
+    margin-right: 4px;
+  }
+
+  .donate-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../images/donate-banner.jpg");
+    background-size: cover;
+    height: 338px;
+
+    @include desktop {
+      height: 438px;
+      gap: 30px;
+    }
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+
+    @include desktop {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  .sub-header {
+    font-size: 20px;
+    line-height: 150%;
+    max-width: 784px;
+
+    @include desktop {
+      font-size: 16px;
+    }
+  }
 }
