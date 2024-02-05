@@ -139,43 +139,4 @@
     margin: auto 0;
     margin-right: 4px;
   }
-
-  .donate-banner {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../images/donate-banner.jpg");
-    background-size: cover;
-    height: 338px;
-
-    @include desktop {
-      height: 438px;
-      gap: 30px;
-    }
-  }
-
-  h3 {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 31px;
-
-    @include desktop {
-      font-size: 32px;
-      line-height: 42px;
-    }
-  }
-
-  .sub-header {
-    font-size: 20px;
-    line-height: 150%;
-    max-width: 784px;
-
-    @include desktop {
-      font-size: 16px;
-    }
-  }
 }

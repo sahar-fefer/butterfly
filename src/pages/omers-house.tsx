@@ -13,7 +13,7 @@ const OmersHouse = () => {
   console.log("Layout", Layout);
 
   return (
-    <Layout>
+    <Layout needWrapper={true}>
       <div className="omers-house">
         <h1 className="header">הבית של עומר</h1>
         <div className="sub-title">בית חם לצעירות חסרות עורף משפחתי</div>

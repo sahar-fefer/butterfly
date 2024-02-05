@@ -233,11 +233,11 @@ p {
 }
 
 .desktop-fill-page {
-  // @include tablet-large {
-  //     position: absolute;
-  //     inset: 0;
-  //     top: 77px;
-  // }
+  @include tablet-large {
+    position: absolute;
+    inset: 0;
+    top: 77px;
+  }
 
   @include desktop {
     position: absolute;
