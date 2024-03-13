@@ -1,0 +1,319 @@
+@import "../../styles/variables";
+
+.contact-wrapper {
+  background: #f7f7f7;
+  padding: 0 var(--side-space);
+
+  @include desktop {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 198px;
+  }
+
+  .contact-us {
+    padding-top: 50px;
+    max-width: 478px;
+    margin: 0 auto;
+
+    @include desktop {
+      margin: 0;
+      padding-top: 74px;
+      max-width: unset;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 39px;
+      color: #0d1f2d;
+      margin-bottom: 20px;
+
+      @include desktop {
+        font-size: 45px;
+        line-height: 59px;
+        margin-bottom: 22px;
+      }
+    }
+
+    .title {
+      font-size: 18px;
+      line-height: 24px;
+
+      @include desktop {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+
+    .sub,
+    .text {
+      font-weight: 400;
+      color: #607e82;
+    }
+
+    .text {
+      font-size: 16px;
+      line-height: 21px;
+      padding-top: 3px;
+
+      @include desktop {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    .s-title {
+      padding-top: 2px;
+
+      @include desktop {
+        padding-top: 0;
+      }
+    }
+
+    .m {
+      font-weight: 600;
+      color: #0d1f2d;
+      margin: 30px 0 16px;
+
+      @include desktop {
+        margin-top: 36px;
+      }
+    }
+
+    .num,
+    .email {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      color: #fe2932;
+
+      @include desktop {
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  .form {
+    max-width: 478px;
+    padding: 50px 0;
+    margin: 0 auto;
+
+    @include desktop {
+      margin: 0;
+      // padding-top: 155px;
+      padding: 6% 0 0;
+    }
+
+    .dropdown-button,
+    input,
+    textarea,
+    .submit,
+    ul {
+      width: 100%;
+      max-width: 478px;
+      height: 54px;
+      background: #ffffff;
+      border: 2px solid #ffe1e2;
+      border-radius: 1px;
+      padding: 15px 20px 15px 21px;
+      // margin-top: 10px;
+      margin-top: 7px;
+      font-family: "Assistant";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      color: #607e82;
+      transition: all 0.2s;
+
+      @include desktop {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0px 0px 8px 2px rgba(255, 225, 226, 0.7);
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    textarea {
+      height: 165px;
+      resize: none;
+      display: flow-root;
+    }
+
+    .submit {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #ffffff;
+      background: rgba(255, 18, 28, 0.9);
+      border: 2px solid #ff121c;
+      display: block;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      @include desktop {
+        font-size: 16px;
+        line-height: 21px;
+        width: 218px;
+      }
+
+      .send {
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s ease 0.2s;
+        width: 16px;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(45deg);
+        }
+
+        to {
+          transform: rotate(405deg);
+        }
+      }
+    }
+
+    .submit.loading {
+      cursor: wait;
+
+      .text {
+        display: none;
+      }
+
+      .loader {
+        width: 18px;
+        height: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: spin 1s infinite forwards linear;
+
+        &::after {
+          content: "";
+          width: 18px;
+          height: 9px;
+          border-top-left-radius: 100px;
+          border-top-right-radius: 100px;
+          border: 2px solid rgb(255, 255, 255);
+          border-bottom: 0;
+          box-sizing: border-box;
+          margin-bottom: auto;
+        }
+      }
+    }
+
+    .submit.submitted {
+      cursor: none;
+      pointer-events: none;
+
+      .text {
+        display: none;
+      }
+
+      .send {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .dropdown {
+      position: relative;
+      z-index: 2;
+
+      svg,
+      .dropdown-button,
+      ul,
+      li {
+        transition: all 0.2s cubic-bezier(0.78, 0.18, 0.31, 1.08);
+      }
+
+      .dropdown-button {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 3;
+        overflow: hidden;
+      }
+
+      ul {
+        background: #ffffff;
+        position: absolute;
+        padding: 0 20px 0 21px;
+        border: 0px;
+        border: 2px solid #f7f7f7;
+        border-top: 0px;
+        margin: 0;
+        pointer-events: none;
+        z-index: 2;
+        left: 0;
+        // bottom: -2px;
+        top: 54px;
+        width: 100%;
+        height: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      li {
+        list-style: none;
+        padding: 4px 0;
+        background: #ffffff;
+        cursor: pointer;
+
+        &:hover {
+          color: #4d4d4d;
+        }
+      }
+    }
+
+    .dropdown.active {
+      box-shadow: 0px 0px 8px 2px rgba(255, 225, 226, 0.7);
+
+      svg {
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+      }
+
+      ul {
+        opacity: 1;
+        height: 163px;
+        pointer-events: auto;
+        box-shadow: 0px 1px 1px rgba(58, 72, 80, 0.07),
+          0px 4px 12px rgba(176, 189, 197, 0.13),
+          0px 1px 4px rgba(176, 189, 197, 0.07);
+        padding-top: 6px;
+        padding-bottom: 10px;
+        border: 2px solid #ffe1e2;
+        border-top: 0px;
+
+        @include desktop {
+          height: 178px;
+        }
+      }
+    }
+
+    .err {
+      font-size: 14px;
+      color: #ff121c;
+      margin: 3px 8px;
+      margin-bottom: 0;
+      display: inline-block;
+      height: 0;
+    }
+  }
+}

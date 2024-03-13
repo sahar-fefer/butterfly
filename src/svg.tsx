@@ -1,6 +1,6 @@
 import React from "react";
 interface Props {
-  color: string;
+  color?: string;
 }
 
 export const DonateHart = (props: Props) => {

@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+@import "../../components/accordion/accordion";
+
+.faq {
+  padding-bottom: 40px;
+  padding: 0 var(--side-space) 40px;
+
+  @include tablet-large() {
+    background: linear-gradient(
+      180deg,
+      #f7f7f7 16.62%,
+      rgba(247, 247, 247, 0) 100%
+    );
+    padding: 314px 0 75px;
+  }
+
+  @include desktop() {
+    padding-top: 358px;
+  }
+
+  .content-wrapper {
+    margin: 0 auto;
+    max-width: 986px;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 37px;
+    color: var(--hard-gray);
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include tablet-large() {
+      margin-bottom: 56px;
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+}

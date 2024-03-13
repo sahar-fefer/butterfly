@@ -1,6 +1,6 @@
 import * as React from "react";
-import Faq from "../components/faq";
-import "../styles/_home-page.scss";
+import Faq from "../components/faq/faq";
+import "../styles/_index.scss";
 import Layout from "../components/layout";
 import { Link } from "gatsby";
 import { DonateHart } from "../svg";
@@ -9,6 +9,7 @@ import MobileBannerImg from "../images/main-banner-m.jpg";
 import FullBannerImg from "../images/main-banner-d.jpg";
 import AboutButterfly from "../images/about-butterfly.jpg";
 import AboutHouse from "../images/about-house.jpg";
+import Button from "../components/button/button";
 
 //  markup
 const Index = () => {
@@ -31,13 +32,14 @@ const Index = () => {
             טוב ליבך ושמחת החיים שלך.
           </div>
           <div className="ctas">
-            <Link to="/donate" className="donate-button">
-              <DonateHart color="black" />
-              לתרומה
-            </Link>
-            <Link to="/donate" className="volunteer">
-              להתנדבות
-            </Link>
+            <Button
+              text={"לתרומה"}
+              link={"donate"}
+              hart={true}
+              color="white"
+              hartColor="black"
+            />
+            <Button text={"להתנדבות"} link={"donate"} color="ghost" />
           </div>
         </div>
       </section>

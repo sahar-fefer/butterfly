@@ -1,5 +1,4 @@
-@import './variables';
-@import './general';
-@import './nav';
-@import './svg';
-@import './footer';
+@import "./variables";
+@import "./general";
+@import "../components/nav/nav";
+@import "../components/footer/footer";

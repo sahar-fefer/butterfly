@@ -1,8 +1,8 @@
 import React, { useState, createContext } from "react";
 import classNames from "classnames";
 import "../styles/styles.css";
-import Footer from "./footer";
-import Nav from "./nav";
+import Footer from "./footer/footer";
+import Nav from "./nav/nav";
 
 const langContext = createContext<string>("EN");
 interface Props {

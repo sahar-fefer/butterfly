@@ -68,6 +68,7 @@ summary,
 time,
 mark,
 audio,
+button,
 video {
   margin: 0;
   padding: 0;
@@ -129,20 +130,11 @@ select {
   vertical-align: middle;
 }
 
-button {
-  background: none;
-  border: none;
-  color: inherit;
-  cursor: pointer;
-  font-family: inherit;
-  padding: 0;
-}
-
 .page-wrapper {
-  margin: 50px $side-space 30px;
+  margin: 50px var(--side-space) 30px;
 
   @include tablet-large {
-    margin: 74px $side-space 76px;
+    margin: 74px var(--side-space) 76px;
   }
 
   @include desktop {
@@ -150,7 +142,7 @@ button {
   }
 }
 
-h1.header {
+.header {
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
@@ -197,7 +189,17 @@ p {
 }
 
 .red {
-  color: #fe2932;
+  color: var(--red);
+}
+
+.red-clickable {
+  color: var(--red);
+  transition: color 0.15s;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--dark-red);
+  }
 }
 
 .text-grid {
