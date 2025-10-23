@@ -5,11 +5,12 @@ import Layout from "../components/layout";
 import { Link } from "gatsby";
 import { DonateHart } from "../svg";
 
-import MobileBannerImg from "../images/main-banner-m.jpg";
-import FullBannerImg from "../images/main-banner-d.jpg";
-import AboutButterfly from "../images/about-butterfly.jpg";
-import AboutHouse from "../images/about-house.jpg";
+import MobileBannerImg from "../assets/images/main-banner-m.jpg";
+import FullBannerImg from "../assets/images/main-banner-d.jpg";
+import AboutButterfly from "../assets/images/about-butterfly.jpg";
+import AboutHouse from "../assets/images/about-house.jpg";
 import Button from "../components/button/button";
+import CardsCarousel from "../components/cardsCarousel/cardsCarousel";
 
 //  markup
 const Index = () => {
@@ -48,11 +49,9 @@ const Index = () => {
         <h2>הסיפור של עומר</h2>
         <div className="sub-title">
           עומר נסעה לטיול הגדול, עם המון חלומות ותמימות שהכול אפשרי - עומר נהרגה
-          בנפאל. ב-21 שנות חייה
-          <br /> הצליחה בדרכה האמיתית והמיוחדת לגעת בליבם של הרבה אנשים, היא
-          ידעה לתת מקום לכול אדם, וכשהיא
-          <br /> הביטה בך, ידעת שהיא איתך. כדי להנציח את זכרה של עומר הקמנו שתי
-          עמותות.
+          בנפאל. ב-21 שנות חייה הצליחה בדרכה האמיתית והמיוחדת לגעת בליבם של הרבה
+          אנשים, היא ידעה לתת מקום לכול אדם, וכשהיא הביטה בך, ידעת שהיא איתך.
+          כדי להנציח את זכרה של עומר הקמנו שתי עמותות.
         </div>
         <div className="ctas">
           <Link to="/" className="cta butterfly">
@@ -76,6 +75,7 @@ const Index = () => {
           </Link>
         </div>
       </section>
+      <CardsCarousel />
       <Faq />
     </Layout>
   );

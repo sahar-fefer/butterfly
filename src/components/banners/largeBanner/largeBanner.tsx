@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import "./_large-banner.scss";
+import * as s from "./_large-banner.module.scss";
 import Button from "../../button/button";
 
 interface Props {
@@ -14,11 +14,11 @@ interface Props {
 export const LargeBanner = (props: Props) => {
   const { bgImage, bgImageAlt, title, text, link, linkText } = props;
   return (
-    <div className="large-banner">
-      <img className="bg-image" loading="lazy" src={bgImage} alt={bgImageAlt} />
-      <div className="text-wrapper">
-        <h3 className="title">{title}</h3>
-        <div className="text">{text}</div>
+    <div className={s.largeBanner}>
+      <img className={s.bgImage} loading="lazy" src={bgImage} alt={bgImageAlt} />
+      <div className={s.textWrapper}>
+        <h3 className={s.title}>{title}</h3>
+        <div className={s.text}>{text}</div>
         {/* <Link to={`/${link}`} className="button">
           {linkText}
         </Link> */}

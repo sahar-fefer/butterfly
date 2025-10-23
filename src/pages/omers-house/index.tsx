@@ -1,22 +1,22 @@
 import * as React from "react";
-// import "./_omers-house.scss";
+import * as s from "./_omers-house.module.scss";
 
 import Layout from "../../components/layout";
 import { GalleryGrid } from "../../components/galleryGrid/galleryGrid";
 import { LargeBanner } from "../../components/banners/largeBanner/largeBanner";
 
-import takeAPart from "../../images/take-a-part.jpg";
-import donateToOmersHouseMobile from "../../images/donate-to-omer's-house-m.jpg";
-import donateToOmersHouse from "../../images/donate-to-omer's-house.jpg";
+import takeAPart from "../../assets/images/take-a-part.jpg";
+import donateToOmersHouseMobile from "../../assets/images/donate-to-omer's-house-m.jpg";
+import donateToOmersHouse from "../../assets/images/donate-to-omer's-house.jpg";
 import { DonateHart } from "../../svg";
 
-import gallery1 from "../../images/omers-house-gallery1.jpg";
-import gallery2 from "../../images/omers-house-gallery2.jpg";
-import gallery3 from "../../images/omers-house-gallery3.jpg";
-import gallery4 from "../../images/omers-house-gallery4.jpg";
-import gallery5 from "../../images/omers-house-gallery5.jpg";
-import gallery6 from "../../images/omers-house-gallery6.jpg";
-import gallery7 from "../../images/omers-house-gallery7.jpg";
+import gallery1 from "../../assets/images/omers-house-gallery1.jpg";
+import gallery2 from "../../assets/images/omers-house-gallery2.jpg";
+import gallery3 from "../../assets/images/omers-house-gallery3.jpg";
+import gallery4 from "../../assets/images/omers-house-gallery4.jpg";
+import gallery5 from "../../assets/images/omers-house-gallery5.jpg";
+import gallery6 from "../../assets/images/omers-house-gallery6.jpg";
+import gallery7 from "../../assets/images/omers-house-gallery7.jpg";
 //  markup
 const OmersHouse = () => {
   const images = [
@@ -30,9 +30,9 @@ const OmersHouse = () => {
   ];
   return (
     <Layout needWrapper={true}>
-      <div className="omers-house">
+      <div className={s.omersHouse}>
         <h1 className="header">הבית של עומר</h1>
-        <div className="sub-title">בית חם לצעירות חסרות עורף משפחתי</div>
+        <div className={s.subTitle}>בית חם לצעירות חסרות עורף משפחתי</div>
         <p className="text-grid l center">
           הבית של עומר הוקם ומנוהל על ידי עמותת "הפרפרים של עומר" (ע.ר.
           580614402). זהו בית מגורים פרטי, חם ומחבק, לצעירות חסרות עורף משפחתי,

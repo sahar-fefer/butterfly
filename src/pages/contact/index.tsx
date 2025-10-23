@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./_contact.scss";
+import * as s from "./_contact.module.scss";
 
 import Layout from "../../components/layout";
 import ContactUs from "../../components/contact/contactUs";
@@ -9,7 +9,7 @@ import Form from "../../components/contact/form";
 const About = () => {
   return (
     <Layout needWrapper={false}>
-      <div className="contact-wrapper desktop-fill-page">
+      <div className={`${s.contactWrapper} desktop-fill-page`}>
         {/* <div className="page-wrapper"> */}
         <ContactUs />
         <Form />

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import { DonateHart, Logo } from "../../svg";
 import Button from "../button/button";
+import * as s from "./_nav.module.scss";
 
 interface Props {
   lang: String;
@@ -47,63 +48,67 @@ function Nav(props: Props) {
   };
 
   return (
-    <nav className={isNavOpen ? "open" : "close"}>
-      <div className="right">
+    <nav className={isNavOpen ? s.open : ""}>
+      <div className={s.right}>
         <button
-          className="burger-bar"
+          className={s.burgerBar}
           onClick={(e: React.MouseEvent<HTMLElement>) => {
             toggleNav(e);
           }}
         >
-          <div className="line"></div>
-          <div className="line"></div>
-          <div className="line"></div>
+          <div className={s.line}></div>
+          <div className={s.line}></div>
+          <div className={s.line}></div>
         </button>
-        <div className="separator right" />
-        <Link className="logo" to="/" onClick={onLogoClick}>
+        <div className={`${s.separator} ${s.right}`} />
+        <Link className={s.logo} to="/" onClick={onLogoClick}>
           <Logo />
         </Link>
-        <div className="separator left" />
+        <div className={`${s.separator} ${s.left}`} />
         <button
-          className="background-side-nav"
+          className={s.backgroundSideNav}
           onClick={(e: React.MouseEvent<HTMLElement>) => {
             toggleNav(e);
           }}
         ></button>
-        <div className="links">
+        <div className={s.links}>
           <Link
             to="/omers-butterflies"
             partiallyActive={true}
-            activeClassName="active"
+            activeClassName={s.active}
           >
             הפרפרים של עומר
           </Link>
           <Link
             to="/omers-house"
             partiallyActive={true}
-            activeClassName="active"
+            activeClassName={s.active}
           >
             הבית של עומר
           </Link>
-          <Link to="/bracelets" partiallyActive={true} activeClassName="active">
+          <Link
+            to="/bracelets"
+            partiallyActive={true}
+            activeClassName={s.active}
+          >
             צמידים
           </Link>
           <Link
             to="/donate"
-            className={"donate"}
+            className={s.donate}
             partiallyActive={true}
-            activeClassName="active"
+            activeClassName={s.active}
           >
             מתנדבים ותורמים
           </Link>
-          <Link to="/about" partiallyActive={true} activeClassName="active">
+          <Link to="/about" partiallyActive={true} activeClassName={s.active}>
             אודות
           </Link>
-          <Link to="/contact" partiallyActive={true} activeClassName="active">
+          <Link to="/contact" partiallyActive={true} activeClassName={s.active}>
             צור קשר
           </Link>
           <button
-            className="language"
+            className={s.language}
             onClick={(e: React.MouseEvent<HTMLElement>) => {
               changeLang();
             }}
@@ -112,9 +117,9 @@ function Nav(props: Props) {
           </button>
         </div>
       </div>
-      <div className="left">
+      <div className={s.left}>
         <button
-          className="language"
+          className={s.language}
           onClick={(e: React.MouseEvent<HTMLElement>) => {
             changeLang();
           }}
@@ -125,6 +130,7 @@ function Nav(props: Props) {
           text={"לתרומה"}
           link={"donate"}
           hart={true}
+          className={s.donationButton}
           // color="white"
           // hartColor="black"
         />

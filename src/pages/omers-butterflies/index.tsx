@@ -1,23 +1,23 @@
 import * as React from "react";
-import "./_omers-butterflies.scss";
+import * as s from "./_omers-butterflies.module.scss";
 
 import Layout from "../../components/layout";
 import { GalleryGrid } from "../../components/galleryGrid/galleryGrid";
 import { LargeBanner } from "../../components/banners/largeBanner/largeBanner";
 
-import donateToOmersHouse from "../../images/donate-to-omer's-house.jpg";
-import takeAPart from "../../images/take-a-part.jpg";
-import donateToOmersHouseMobile from "../../images/donate-to-omer's-house-m.jpg";
+import donateToOmersHouse from "../../assets/images/donate-to-omer's-house.jpg";
+import takeAPart from "../../assets/images/take-a-part.jpg";
+import donateToOmersHouseMobile from "../../assets/images/donate-to-omer's-house-m.jpg";
 import { DonateHart } from "../../svg";
 import BraceletsAreasBanner from "../../components/banners/braceletsAreasBanner/BraceletsAreasBanner";
 
-import gallery1 from "../../images/omers-butterflies-gallery1.jpg";
-import gallery2 from "../../images/omers-butterflies-gallery2.jpg";
-import gallery3 from "../../images/omers-butterflies-gallery3.jpg";
-import gallery4 from "../../images/omers-butterflies-gallery4.jpg";
-import gallery5 from "../../images/omers-butterflies-gallery5.jpg";
-import gallery6 from "../../images/omers-butterflies-gallery6.jpg";
-import gallery7 from "../../images/omers-butterflies-gallery7.jpg";
+import gallery1 from "../../assets/images/omers-butterflies-gallery1.jpg";
+import gallery2 from "../../assets/images/omers-butterflies-gallery2.jpg";
+import gallery3 from "../../assets/images/omers-butterflies-gallery3.jpg";
+import gallery4 from "../../assets/images/omers-butterflies-gallery4.jpg";
+import gallery5 from "../../assets/images/omers-butterflies-gallery5.jpg";
+import gallery6 from "../../assets/images/omers-butterflies-gallery6.jpg";
+import gallery7 from "../../assets/images/omers-butterflies-gallery7.jpg";
 //  markup
 const OmersHouse = () => {
   const images = [
@@ -31,7 +31,7 @@ const OmersHouse = () => {
   ];
   return (
     <Layout needWrapper={true}>
-      <div className="omers-butterflies">
+      <div className={s.omersButterflies}>
         <h1 className="header">הפרפרים של עומר</h1>
         {/* <div className="sub-title">בית חם לצעירות חסרות עורף משפחתי</div> */}
         <p className="text-grid l center">
@@ -119,7 +119,7 @@ const OmersHouse = () => {
           כמו אפקט הפרפר ותדעו שהתחלתם שרשרת אנושית של מעשים טובים. אחרי שתעבירו
           את הצמיד תוכלו תמיד לקבל חדש ולהמשיך...
         </p>
-        <button className="read-more red-clickable">להמשך קריאה</button>
+        <button className={`${s.readMore} red-clickable`}>להמשך קריאה</button>
         <BraceletsAreasBanner />
       </div>
     </Layout>

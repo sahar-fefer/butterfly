@@ -1,18 +1,18 @@
 import * as React from "react";
-import "./_about.scss";
+import * as s from "./_about.module.scss";
 
 import Layout from "../../components/layout";
-import AyeletAbdOmer from "../../images/ayelet-and-omer.jpg";
-import OmerTattoo from "../../images/butterflies-are-forever-omer's-tattoo.jpg";
-import AyeletFooter from "../../images/about-ayelet-shemesh.jpg";
-import YaelFooter from "../../images/about-yael-sarig.jpg";
+import AyeletAbdOmer from "../../assets/images/ayelet-and-omer.jpg";
+import OmerTattoo from "../../assets/images/butterflies-are-forever-omer's-tattoo.jpg";
+import AyeletFooter from "../../assets/images/about-ayelet-shemesh.jpg";
+import YaelFooter from "../../assets/images/about-yael-sarig.jpg";
 
 //  markup
 const About = () => {
   return (
     <Layout>
-      <div className="about-page">
-        <section className="our-story">
+      <div className={s.aboutPage}>
+        <section className={s.ourStory}>
           <h1 className="header">הסיפור שלנו</h1>
           <div className="sub-title">
             עומר , כמעט בת 21, נסעה אחרי הצבא לטיול הגדול, עם תרמיל על הגב, עם
@@ -20,7 +20,7 @@ const About = () => {
             האוטובוס בה נסעה התגלגל לתהום ועומר נהרגה במקום. אנחנו, המשפחה של
             עומר והחברים הקמנו להנצחתה את עמותת "הפרפרים של עומר.
           </div>
-          <div className="images-wrapper">
+          <div className={s.imagesWrapper}>
             <img loading="lazy" src={AyeletAbdOmer} alt="" />
             <img loading="lazy" src={OmerTattoo} alt="" />
           </div>
@@ -44,19 +44,19 @@ const About = () => {
             וסתעד לכנו סתשם השמה - לתכי מורגם בורק? לתיג ישבעס.
           </p>
         </section>
-        <section className="founders">
+        <section className={s.founders}>
           <div className="m-to-d-l">
-            <div className="images-wrapper">
+            <div className={s.imagesWrapper}>
               <img
                 loading="lazy"
-                className="person"
+                className={s.person}
                 src={AyeletFooter}
                 alt=""
               />
-              <img loading="lazy" className="person" src={YaelFooter} alt="" />
+              <img loading="lazy" className={s.person} src={YaelFooter} alt="" />
             </div>
-            <div className="title">איילת שמש ויעל שריג</div>
-            <div className="info">
+            <div className={s.title}>איילת שמש ויעל שריג</div>
+            <div className={s.info}>
               איילת היא אמא של עומר וגשעומר נהרגה בנפאל היה לה מאוד חשוב להנציח
               את זכרה.
               <br />
@@ -66,22 +66,22 @@ const About = () => {
               שהיא תהייה חלק מהתהליך.
             </div>
           </div>
-          <div className="d-l-grid">
-            <div className="box">
-              <img className="person" src={AyeletFooter} alt="" />
+          <div className={s.foundersGrid}>
+            <div className={s.box}>
+              <img className={s.person} src={AyeletFooter} alt="" />
               <div className="about-person">
-                <div className="title">איילת שמש</div>
-                <div className="info">
+                <div className={s.title}>איילת שמש</div>
+                <div className={s.info}>
                   איילת היא אמא של עומר וכשעומר נהרגה בנפאל היה לה מאוד חשוב
                   להנציח את זכרה.
                 </div>
               </div>
             </div>
-            <div className="box">
-              <img className="person" src={YaelFooter} alt="" />
+            <div className={s.box}>
+              <img className={s.person} src={YaelFooter} alt="" />
               <div className="about-person">
-                <div className="title">יעל שריג</div>
-                <div className="info">
+                <div className={s.title}>יעל שריג</div>
+                <div className={s.info}>
                   יעל ואיילת הכירו ב?????? ומאז הן חברות טובות ואי אפשר להפריד
                   בינהן. כשאיילת החליטה שהיא מקימה עמותות לעומר ליעל זה היה ברור
                   שהיא תהייה חלק מהתהליך.

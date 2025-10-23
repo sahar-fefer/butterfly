@@ -1,0 +1,16 @@
+@import "../../styles/variables";
+
+.omersHouse {
+  .subTitle {
+    color: #607e82;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-bottom: 12px;
+
+    @include tablet-l() {
+      font-size: 20px;
+    }
+  }
+}

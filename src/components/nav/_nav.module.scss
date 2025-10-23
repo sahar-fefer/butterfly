@@ -1,0 +1,275 @@
+@import "../../styles/variables";
+
+nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  // max-width: 100vw;
+  color: var(--regular-gray);
+  background: #fffffff2 !important;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  // overflow: hidden;
+  filter: drop-shadow(0px 4px 10px rgba(13, 31, 45, 0.08));
+
+  @include tablet-l() {
+    height: 77px;
+  }
+
+  @include desktop() {
+    height: 87px;
+  }
+
+  .left,
+  .right {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  .burgerBar {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-left: 22px;
+    margin-right: 26px;
+    transition: all 0.15s 0.2s;
+
+    .line {
+      width: 21px;
+      height: 2px;
+      background-color: #0d1f2d;
+    }
+
+    @include tablet-l() {
+      display: none;
+    }
+  }
+
+  &.open {
+    // overflow: visible;
+
+    .links {
+      right: 0;
+      z-index: 11;
+      width: 285px;
+      pointer-events: all;
+    }
+
+    .backgroundSideNav {
+      z-index: 10;
+    }
+
+    .links,
+    .backgroundSideNav {
+      opacity: 1;
+      visibility: visible;
+      // transition: all .3s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+      transition: all 0.3s 0.2s;
+      // height: 100vh;
+      z-index: 111;
+    }
+
+    .burgerBar {
+      gap: 5px;
+      transition: all 0.15s;
+    }
+  }
+
+  .backgroundSideNav {
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    height: 100vh;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .donationButton {
+    width: 102px;
+    height: 42px;
+
+    @include tablet-l {
+      width: 125px;
+      height: 100%;
+    }
+
+    @include desktop {
+      width: 155px;
+    }
+
+    .hart {
+      width: 10px;
+      height: 9px;
+
+      @include tablet-l() {
+        width: 13px;
+        height: 12px;
+      }
+    }
+  }
+
+  .language {
+    margin: 0 32px;
+    display: none;
+    cursor: pointer;
+
+    @include tablet-l() {
+      display: block;
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+
+  .links {
+    position: fixed;
+    width: 165px;
+    height: 100vh;
+    background: #0d1f2d;
+    top: 0;
+    bottom: 0;
+    // right: -120px;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    // transition: all .2s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-end;
+    color: #ffffff;
+    text-align: right;
+    padding-top: 48px;
+    padding-right: 55px;
+    word-break: keep-all;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: -2;
+
+    * {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    @include tablet-l() {
+      position: static;
+      width: fit-content;
+      height: fit-content;
+      background: transparent;
+      opacity: 1;
+      visibility: visible;
+      flex-direction: row;
+      gap: 28px;
+      color: inherit;
+      padding: 0;
+      margin: 0 30px;
+      pointer-events: all;
+      z-index: 1;
+    }
+  }
+
+  .language,
+  .links a {
+    transition: all 0.15s;
+
+    &:hover {
+      opacity: 0.8;
+
+      @include tablet-l() {
+        color: var(--hard-gray);
+      }
+    }
+  }
+
+  a {
+    margin-bottom: 30px;
+
+    &.active {
+      color: var(--red);
+
+      &:hover {
+        color: var(--dark-red);
+      }
+    }
+
+    @include tablet-l() {
+      font-size: 16px;
+      line-height: 21px;
+      margin: 0;
+
+      // &:first-child {
+      //   margin-right: 30px;
+      // }
+    }
+  }
+  .language {
+    width: fit-content;
+    display: block;
+
+    @include tablet-l() {
+      display: none;
+    }
+  }
+  .donate {
+    margin-bottom: 80px;
+
+    @include tablet-l() {
+      margin-bottom: 0;
+    }
+  }
+
+  .logo {
+    margin: 13px 18px 19px;
+
+    @include tablet-l() {
+      margin: -5px 24px 0;
+    }
+
+    @include desktop() {
+      margin: 14px 45px 24px 32px;
+    }
+
+    & svg {
+      width: 80px;
+      height: 38px;
+
+      @include tablet-l() {
+        width: 97px;
+        height: 49px;
+      }
+    }
+  }
+
+  .separator {
+    height: 40px;
+    width: 1px;
+    margin: 15px 0;
+    background: var(--red);
+
+    @include tablet-l() {
+      height: 49px;
+      margin: 19px 0;
+    }
+
+    &.left {
+      display: none;
+
+      @include tablet-l() {
+        display: block;
+      }
+    }
+
+    &.right {
+      display: block;
+
+      @include tablet-l() {
+        display: none;
+      }
+    }
+  }
+}

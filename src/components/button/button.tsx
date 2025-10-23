@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import { DonateHart } from "./../../svg";
-import "./_button.scss";
+import * as s from "./_button.module.scss";
 
 interface Props {
   text: string;
@@ -12,16 +12,17 @@ interface Props {
   height?: number;
   hart?: boolean;
   noBorder?: boolean;
+  className?: string;
 }
 
 function Button(props: Props) {
-  const { text, link, color, hartColor, hart, noBorder } = props;
+  const { text, link, color, hartColor, hart, noBorder, className } = props;
   return (
     <Link
       to={`/${link}`}
-      className={`button ${color ? color : ""} ${hart ? "hart" : ""} ${
-        noBorder ? "no-border" : ""
-      }`}
+      className={`${s.button} ${color ? s[color] : ""} ${hart ? s.hart : ""} ${
+        noBorder ? s.noBorder : ""
+      } ${className ? className : ""}`}
     >
       {hart ? <DonateHart color={hartColor ? hartColor : ""} /> : ""}
       {text}

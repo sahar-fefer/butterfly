@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "./_donate.scss";
-import takeAPart from "../../images/take-a-part.jpg";
+import * as s from "./_donate.module.scss";
+import takeAPart from "../../assets/images/take-a-part.jpg";
 
 import Layout from "../../components/layout";
-import SimpleWood from "../../images/simply-wood-donates.jpg";
-import Riviera from "../../images/riviera-donates.jpg";
-import Polyron from "../../images/polyron-donates.jpg";
-import Avatar from "../../images/avatar-donates.jpg";
+import SimpleWood from "../../assets/images/simply-wood-donates.jpg";
+import Riviera from "../../assets/images/riviera-donates.jpg";
+import Polyron from "../../assets/images/polyron-donates.jpg";
+import Avatar from "../../assets/images/avatar-donates.jpg";
 import { LargeBanner } from "../../components/banners/largeBanner/largeBanner";
 
 //  markup
@@ -96,40 +96,40 @@ const Donate = () => {
   ];
 
   const onReadMore = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
-    const parent: HTMLElement | null = e.currentTarget.closest(".about-donate");
-    parent && parent.classList.add("read-more-open");
+    const parent: HTMLElement | null = e.currentTarget.closest(`.${s.aboutDonate}`);
+    parent && parent.classList.add(s.readMoreOpen);
   };
 
   return (
     <Layout>
-      <div className="donate-page">
+      <div className={s.donatePage}>
         <h1 className="header">מתנדבים ותורמים</h1>
-        <div className="sub-title">
+        <div className={s.donateSubTitle}>
           לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר סוברט
           לורם שבצק יהול, לכנוץ בעריר גק ליץ, ושבעגט ליבם סולגק. בראיט ולחת צורק
           מונחף, בגורמי מגמש. תרבנך וסתעד לכנו סתשם השמה - לתכי מורגם בורק? לתיג
           ישבעס.
         </div>
-        <div className="donates-gride">
+        <div className={s.donatesGride}>
           {donatedList.map((details, i) => {
             return (
-              <div className="donate-cell" key={i}>
+              <div className={s.donateCell} key={i}>
                 <img
                   loading="lazy"
                   className={details.imgShape}
                   src={details.imgName}
                   alt={details.imgAlt}
                 />
-                <div className="info">
-                  <div className="name">{details.name}</div>
-                  <div className={`about-donate`}>
+                <div className={s.info}>
+                  <div className={s.name}>{details.name}</div>
+                  <div className={s.aboutDonate}>
                     {details.about}
                     {details.about2 && isDesktop ? (
                       <span>
-                        <span className="dots">...</span>
-                        <span className="about2">{details.about2}</span>
+                        <span className={s.dots}>...</span>
+                        <span className={s.about2}>{details.about2}</span>
                         <span
-                          className="read-more"
+                          className={s.readMore}
                           onClick={(event) => onReadMore(event)}
                         >
                           <button>להמשך קריאה</button>

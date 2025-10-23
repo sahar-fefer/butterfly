@@ -1,12 +1,12 @@
 import React from "react";
-import "./_bracelets-areas-banner.scss";
+import * as s from "./_bracelets-areas-banner.module.scss";
 
 function BraceletsAreasBanner() {
   return (
-    <div className="bracelets-areas-banner">
-      <div className="header">איזורי חלוקה</div>
-      <div className="cities">
-        <div className="box">
+    <div className={s.braceletsAreasBanner}>
+      <div className={s.header}>איזורי חלוקה</div>
+      <div className={s.cities}>
+        <div className={s.box}>
           <svg
             width="61"
             height="61"
@@ -22,7 +22,7 @@ function BraceletsAreasBanner() {
           </svg>
           באר - שבע
         </div>
-        <div className="box">
+        <div className={s.box}>
           <svg
             width="61"
             height="61"
@@ -38,7 +38,7 @@ function BraceletsAreasBanner() {
           </svg>
           רחובות
         </div>
-        <div className="box">
+        <div className={s.box}>
           <svg
             width="61"
             height="61"
@@ -55,14 +55,14 @@ function BraceletsAreasBanner() {
           הוד השרון
         </div>
       </div>
-      <p className="contact">
+      <p className={s.contact}>
         אם אתם רוצים לאסוף צמידים ולהיות חלק מהפרויקט
         <br /> שלנו או להצטרף כאזור חלוקה, צרו קשר
         <br />
       </p>
-      <p className="contact-num">
+      <p className={s.contactNum}>
         איילת -
-        <a className="red" href="tel:054-4404322">
+        <a className={s.red} href="tel:054-4404322">
           {" "}
           054-4404322
         </a>

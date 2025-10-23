@@ -1,0 +1,72 @@
+.button {
+  border: 2px solid var(--red);
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+  transition: all 0.2s;
+  border-radius: 1px;
+  color: #fff;
+  background: var(--opacity-red);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 180px;
+  height: 54px;
+
+  &:hover {
+    background: #e9111b;
+    border-color: #e9111b;
+  }
+
+  &.white {
+    border-color: white;
+    background: var(--opacity-white);
+    color: black;
+
+    &:hover {
+      background: white;
+    }
+  }
+
+  &.noBorder {
+    border: none;
+  }
+
+  &.ghost {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: transparent;
+
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+
+  &.hart:hover svg {
+    animation: heartbeat 1.5s infinite;
+  }
+
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+
+    15% {
+      transform: scale(1.15);
+    }
+
+    25% {
+      transform: scale(1);
+    }
+
+    35% {
+      transform: scale(1.1);
+    }
+
+    45% {
+      transform: scale(1);
+    }
+  }
+}

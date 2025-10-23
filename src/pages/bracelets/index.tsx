@@ -1,17 +1,17 @@
 import * as React from "react";
-import "./_bracelets.scss";
+import * as s from "./_bracelets.module.scss";
 
 import Layout from "../../components/layout";
-import braceletsImg1 from "../../images/bracelets1.jpg";
-import braceletsImg2 from "../../images/bracelets2.jpg";
+import braceletsImg1 from "../../assets/images/bracelets1.jpg";
+import braceletsImg2 from "../../assets/images/bracelets2.jpg";
 import BraceletsAreasBanner from "../../components/banners/braceletsAreasBanner/BraceletsAreasBanner";
 
 //  markup
 const Bracelets = () => {
   return (
     <Layout>
-      <div className="bracelets">
-        <div className="page-content">
+      <div className={s.bracelets}>
+        <div className={s.pageContent}>
           <h1 className="header">צמידים</h1>
           <div className="sub-title">
             <b>לכול אחד יש מה לתת ואין אחד שלא צריך משהו לפעמים</b> אם תרצו לקחת
@@ -20,7 +20,7 @@ const Bracelets = () => {
             יעבור הלאה בדיוק כמו אפקט הפרפר ותדעו שהתחלתם שרשרת אנושית של מעשים
             טובים. אחרי שתעבירו את הצמיד תוכלו תמיד לקבל חדש ולהמשיך...
           </div>
-          <div className="images-wrapper">
+          <div className={s.imagesWrapper}>
             <img loading="lazy" src={braceletsImg1} alt="" />
             <img loading="lazy" src={braceletsImg2} alt="" />
           </div>

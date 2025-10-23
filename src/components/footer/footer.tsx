@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link } from "gatsby"
+import * as s from "./_footer.module.scss";
 
 export default () => {
     const resetNav = () => {
@@ -7,30 +8,30 @@ export default () => {
     }
     return (
         <footer>
-            <div className="wrapper">
-                <div className="group-wrapper">
-                    <div className="group">
-                        <div className="title">ראשי</div>
+            <div className={s.wrapper}>
+                <div className={s.groupWrapper}>
+                    <div className={s.group}>
+                        <div className={s.title}>ראשי</div>
                         <Link to='/omers-house' onClick={resetNav}>הבית של עומר</Link>
                         <Link to='/omers-butterflies' onClick={resetNav}>הפרפרים של עומר</Link>
                         <Link to='/bracelets' onClick={resetNav}>צמידים</Link>
                     </div>
-                    <div className="group">
-                        <div className="title">יצירת קשר</div>
+                    <div className={s.group}>
+                        <div className={s.title}>יצירת קשר</div>
                         <a href="tel:052-3338118">יעל - 052-3338118</a>
                         <a href="tel:054-4404322">איילת - 054-4404322</a>
                         <a href="mailto:omer.butterflies@gmail.com">omer.butterflies@gmail.com</a>
                     </div>
-                    <div className="group">
-                        <div className="title">מידע</div>
+                    <div className={s.group}>
+                        <div className={s.title}>מידע</div>
                         <Link to='/about' onClick={resetNav}>אודות</Link>
                         <a href="https://www.websiteplanet.com/he/blog/%D7%94%D7%AA%D7%90%D7%99%D7%9E%D7%95-%D7%90%D7%AA-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%A9%D7%9C%D7%9B%D7%9D-%D7%9C-gdpr/" target="_blank">
                             מדיניות פרטיות
                         </a>
                         {/* <Link to='/privacy'>מדיניות פרטיות</Link> */}
                     </div>
-                    <div className="group">
-                        <div className="title">Social</div>
+                    <div className={s.group}>
+                        <div className={s.title}>Social</div>
                         <a href='https://www.facebook.com/%D7%94%D7%91%D7%99%D7%AA-%D7%A9%D7%9C-%D7%A2%D7%95%D7%9E%D7%A8-152744878915859' target="_blank">
                             הבית של עומר
                             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +53,7 @@ export default () => {
                         </a>
                     </div>
                 </div>
-                <div className="protects">
+                <div className={s.protects}>
                     © 2022 - כל הזכויות שמורות לבית של עומר,<br /> אין לעשות שימוש בחומר המופיע בדף זה ללא אישור מפורש
                 </div>
             </div>

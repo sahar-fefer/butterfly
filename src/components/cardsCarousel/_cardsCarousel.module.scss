@@ -1,0 +1,241 @@
+@import "../../styles/variables";
+
+// Color variables (matching the design system)
+$background-rose: #ffe7e8;
+$foreground: hsl(0, 0%, 20%);
+$accent: hsl(0, 85%, 55%);
+$white: hsl(0, 0%, 100%);
+$white-transparent-80: hsla(0, 0%, 100%, 0.8);
+
+// Shadows
+$shadow-card: 0 10px 40px -10px hsla(0, 85%, 55%, 0.15);
+$shadow-polaroid: 0 1.5px 4.7px 0.8px rgba(0, 0, 0, 0.12);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+  0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+// Animations
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carouselContainer {
+  position: relative;
+  background: $background-rose;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1190px;
+  margin: 0 var(--side-space);
+  padding: 50px 24px 46px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+
+  @include tablet() {
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    margin: 0 auto;
+    padding: 30px 102px 30px 143px;
+  }
+
+  @include tablet-l() {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 136px;
+  }
+
+  .swiperContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    @include tablet() {
+      order: 2;
+    }
+  }
+
+  .swiperWrapperInner {
+    position: relative;
+    width: 100%;
+    max-width: 28rem;
+  }
+
+  .cardSwiper {
+    width: 100%;
+    max-width: 200px;
+    height: 272px;
+
+    @include tablet-l() {
+      max-width: 254px;
+      height: 346px;
+    }
+  }
+
+  .polaroidCard {
+    border-radius: 4px;
+    box-shadow: $shadow-polaroid;
+    background: $white;
+    padding: 8px 8px 33px 8px;
+
+    @include tablet-l() {
+      padding: 12px 12px 42px 12px;
+    }
+  }
+
+  .polaroidImage {
+    aspect-ratio: 3/4;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .contentSection {
+    text-align: right;
+    animation: fade-in 0.5s ease-out;
+
+    @include tablet() {
+      order: 1;
+    }
+  }
+
+  .subtitle {
+    color: var(--red);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.12px;
+
+    @include tablet-l() {
+      font-size: 16px;
+      letter-spacing: 1.28px;
+    }
+  }
+
+  .title {
+    color: var(--hard-gray);
+    font-size: 28px;
+    font-weight: 600;
+    margin: 12px 0 22px;
+
+    @include tablet-l() {
+      font-size: 32px;
+      margin: 22px 0 30px;
+    }
+  }
+
+  .description {
+    color: var(--regular-gray);
+    font-size: 18px;
+    line-height: 150%;
+    text-wrap: pretty;
+
+    @include tablet-l() {
+      font-size: 20px;
+    }
+  }
+
+  .playButton {
+    width: 54px;
+    height: 54px;
+    padding: 0;
+    border-radius: 50%;
+    background: $accent;
+    color: $white;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: $shadow-card;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 22px;
+
+    @include tablet() {
+      margin-top: 30px;
+
+      &:hover {
+        background: var(--dark-red);
+        transform: scale(1.1);
+      }
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      margin-left: 4px;
+    }
+  }
+
+  .navButton {
+    position: absolute;
+    top: 187px;
+    z-index: 10;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include tablet() {
+      top: 50%;
+    }
+
+    &.prev {
+      left: 24px;
+
+      @include tablet() {
+        &:hover {
+          transform: translateX(-4px);
+        }
+      }
+    }
+
+    &.next {
+      right: 24px;
+
+      @include tablet() {
+        &:hover {
+          transform: translateX(4px);
+        }
+      }
+    }
+
+    img {
+      height: 20px;
+    }
+  }
+
+  .swiperPagination {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 14px;
+    width: auto;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  :global(.swiper-pagination-bullet) {
+    width: 8px;
+    height: 8px;
+    background: var(--red);
+    opacity: 0.2;
+    margin: 0 5px !important;
+    transition: opacity 0.3s ease;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    opacity: 1;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Accordion from "../accordion/accordion";
+import * as s from "./_faq.module.scss";
 
 function Faq() {
   const faqInfo: { question: string; answer: string }[] = [
@@ -33,8 +34,8 @@ function Faq() {
   ));
 
   return (
-    <section className="faq">
-      <div className="content-wrapper">
+    <section className={s.faq}>
+      <div className={s.contentWrapper}>
         <h3>שאלות נפוצות</h3>
         <div>{accordionElements}</div>
       </div>

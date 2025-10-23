@@ -10,7 +10,7 @@
   }
 }
 
-@mixin tablet-large {
+@mixin tablet-l {
   @media (min-width: 1280px) {
     @content;
   }
@@ -22,7 +22,7 @@
   }
 }
 
-@mixin desktop-large {
+@mixin desktop-l {
   @media (min-width: 1440px) {
     @content;
   }
@@ -50,7 +50,7 @@
     --section-space: 76px;
   }
 
-  @include tablet-large() {
+  @include tablet-l() {
     --side-space: 28px;
   }
 
@@ -74,7 +74,7 @@
 
 // sizes display
 .m-to-d-l {
-  @include tablet-large() {
+  @include tablet-l() {
     display: none;
   }
 }
@@ -82,7 +82,7 @@
 .d-l-grid {
   display: none;
 
-  @include tablet-large() {
+  @include tablet-l() {
     display: grid;
   }
 }
