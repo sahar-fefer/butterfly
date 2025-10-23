@@ -230,6 +230,15 @@ p {
   }
 }
 
+.fixed-whatsapp {
+  bottom: 10px;
+  position: fixed;
+  right: 10px;
+  width: 66px;
+  height: 66px;
+  z-index: 100;
+}
+
 .desktop-fill-page {
   @include tablet-l {
     position: absolute;

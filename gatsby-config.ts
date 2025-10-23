@@ -21,7 +21,7 @@ const config: GatsbyConfig = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/assets/images/",
       },
       // __key: "images"
     },
@@ -37,7 +37,7 @@ const config: GatsbyConfig = {
         background_color: `#FFFFFF`,
         theme_color: `#FFFFFF`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`,
+        icon: `src/assets/images/favicon.png`,
       },
     },
   ],

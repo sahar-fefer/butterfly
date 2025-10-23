@@ -3,6 +3,7 @@ import classNames from "classnames";
 import "../styles/styles.css";
 import Footer from "./footer/footer";
 import Nav from "./nav/nav";
+import WhatsAppIcon from "../assets/icons/whatsapp.svg";
 
 const langContext = createContext<string>("EN");
 interface Props {
@@ -33,10 +34,16 @@ export const Layout = (props: Props) => {
         <Nav lang={lang} changeLang={changeLang} />
         <div className={classNames({ "page-wrapper": needWrapper })}>
           {children}
+          <a
+            className="fixed-whatsapp"
+            href="https://wa.me/9720544404322"
+            target="_blank"
+          >
+            <img src={WhatsAppIcon} alt="WhatsApp" />
+          </a>
           {!needWrapper && <Footer />}
         </div>
         {needWrapper && <Footer />}
-        {/* <div className="page-wrapper">{children}</div> */}
       </div>
     </langContext.Provider>
   );
