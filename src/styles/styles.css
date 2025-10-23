@@ -558,9 +558,14 @@ nav .donationButton .hart {
   }
 }
 nav .language {
-  margin: 0 32px;
+  margin: 0 20px;
   display: none;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  nav .language {
+    margin: 0 32px;
+  }
 }
 @media (min-width: 1280px) {
   nav .language {

@@ -114,10 +114,13 @@ nav {
   }
 
   .language {
-    margin: 0 32px;
+    margin: 0 20px;
     display: none;
     cursor: pointer;
 
+    @include tablet() {
+      margin: 0 32px;
+    }
     @include tablet-l() {
       display: block;
       font-size: 16px;
