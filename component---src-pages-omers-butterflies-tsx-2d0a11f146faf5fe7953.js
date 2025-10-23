@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkbutterfly=self.webpackChunkbutterfly||[]).push([[276],{9579:function(e,t,l){l.r(t);var a=l(7294),s=l(2227);t.default=()=>a.createElement(s.ZP,null,a.createElement("div",{className:"omers-butterflies fill-page"},a.createElement("h1",null,"הפרפרים של עומר"),a.createElement("div",{className:"sub-title"},"העמוד יעלה בקרוב...")))}}]);
-//# sourceMappingURL=component---src-pages-omers-butterflies-tsx-2d0a11f146faf5fe7953.js.map
