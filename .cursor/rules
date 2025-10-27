@@ -66,3 +66,4 @@ globs:
 
 - Manage sensitive information using environment variables (`.env.local`).
 - Access environment variables through `process.env.VAR_NAME` (for client-side, prefix with `NEXT_PUBLIC_`).
+
