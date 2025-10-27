@@ -24,6 +24,15 @@ const Bracelets = () => {
             <img loading="lazy" src={braceletsImg1} alt="" />
             <img loading="lazy" src={braceletsImg2} alt="" />
           </div>
+          <div className="videoWrapper">
+            <iframe
+              src="https://www.youtube.com/embed/bZLltZxxcRA"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
           <p className="text-grid">
             אנחנו מזמינים כל מי שעוסק בחינוך ורואה כייעוד להנחיל ערכים של נתינה,
             חברות ועשיית טוב, לקחת חלק במיזם "הפרפרים של עומר" ולהשתמש בו

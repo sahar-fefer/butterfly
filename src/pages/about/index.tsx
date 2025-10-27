@@ -20,6 +20,17 @@ const About = () => {
             האוטובוס בה נסעה התגלגל לתהום ועומר נהרגה במקום. אנחנו, המשפחה של
             עומר והחברים הקמנו להנצחתה את עמותת "הפרפרים של עומר.
           </div>
+          <div className="videoWrapper">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/yzYYwsnQk5c"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
           <div className={s.imagesWrapper}>
             <img loading="lazy" src={AyeletAbdOmer} alt="" />
             <img loading="lazy" src={OmerTattoo} alt="" />
@@ -53,7 +64,12 @@ const About = () => {
                 src={AyeletFooter}
                 alt=""
               />
-              <img loading="lazy" className={s.person} src={YaelFooter} alt="" />
+              <img
+                loading="lazy"
+                className={s.person}
+                src={YaelFooter}
+                alt=""
+              />
             </div>
             <div className={s.title}>איילת שמש ויעל שריג</div>
             <div className={s.info}>

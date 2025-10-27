@@ -1,54 +1,138 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal TypeScript starter
-</h1>
+# Butterfly - הפרפרים של עומר
 
-## 🚀 Quick start
+A memorial website dedicated to Omer, built with Gatsby and TypeScript. This project honors Omer's memory by supporting two charitable organizations established in her name.
 
-1.  **Create a Gatsby site.**
+## About the Project
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+Omer traveled on a journey with many dreams and the innocence that everything is possible - she was killed in Nepal. In her 21 years of life, she managed to touch the hearts of many people in her authentic and special way. She knew how to give space to every person, and when she looked at you, you knew she was with you. To commemorate Omer's memory, two organizations were established.
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby
-    ```
+**Live Site:** [https://sahar-fefer.github.io/butterfly/](https://sahar-fefer.github.io/butterfly/)
 
-2.  **Start developing.**
+## Features
 
-    Navigate into your new site’s directory and start it up.
+- **Hebrew RTL Support** - Fully responsive Hebrew interface
+- **Multiple Pages:**
+  - Home page with main banner and call-to-actions
+  - About page (הפרפרים של עומר & הבית של עומר)
+  - Bracelets section
+  - Contact form
+  - Donation page
+  - FAQ section
+- **Interactive Components:**
+  - Cards carousel with Swiper
+  - Accordion FAQ
+  - Gallery grid
+  - Contact form with validation
+  - Responsive navigation
+- **Optimized Images** - Using Gatsby Image plugin for performance
+- **WhatsApp Integration** - Quick contact option
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Tech Stack
 
-3.  **Open the code and start customizing!**
+- **Framework:** Gatsby 5.15.0
+- **Language:** TypeScript
+- **Styling:** SASS/SCSS
+- **UI Components:**
+  - Swiper for carousels
+  - Custom React components
+- **Image Optimization:** gatsby-plugin-image, gatsby-plugin-sharp
+- **Deployment:** GitHub Pages
 
-    Your site is now running at http://localhost:8000!
+## Getting Started
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+### Prerequisites
 
-4.  **Learn more**
+- Node.js (v16 or higher recommended)
+- npm or yarn
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+### Installation
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sahar-fefer/butterfly.git
+   cd butterfly
+   ```
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+3. Start the development server:
+   ```bash
+   npm run develop
+   ```
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+4. Open your browser and navigate to:
+   ```
+   http://localhost:8000
+   ```
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+## Available Scripts
 
-## 🚀 Quick start (Gatsby Cloud)
+- `npm run develop` - Start the development server
+- `npm run start` - Alias for develop
+- `npm run build` - Build the production site
+- `npm run serve` - Serve the production build locally
+- `npm run clean` - Clean Gatsby cache and public folder
+- `npm run typecheck` - Run TypeScript type checking
+- `npm run deploy` - Build and deploy to GitHub Pages
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+## Project Structure
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+```
+butterfly/
+├── src/
+│   ├── assets/
+│   │   └── images/        # Images and media files
+│   ├── components/        # Reusable React components
+│   │   ├── accordion/
+│   │   ├── banners/
+│   │   ├── button/
+│   │   ├── cardsCarousel/
+│   │   ├── contact/
+│   │   ├── faq/
+│   │   ├── footer/
+│   │   ├── galleryGrid/
+│   │   ├── nav/
+│   │   └── layout.tsx
+│   ├── pages/             # Page components (routes)
+│   │   ├── index.tsx
+│   │   ├── about/
+│   │   ├── bracelets/
+│   │   ├── contact/
+│   │   ├── donate/
+│   │   ├── omers-butterflies/
+│   │   └── omers-house/
+│   ├── styles/            # SCSS stylesheets
+│   └── svg.tsx            # SVG components
+├── gatsby-config.ts       # Gatsby configuration
+├── package.json
+└── tsconfig.json
+```
+
+## Deployment
+
+The site is deployed to GitHub Pages. To deploy:
+
+```bash
+npm run deploy
+```
+
+This will build the site with the path prefix and deploy to the `gh-pages` branch.
+
+## Contributing
+
+This is a memorial project. If you'd like to contribute or suggest improvements, please reach out through the contact form on the website.
+
+## Author
+
+**Sahar**
+
+## License
+
+Private project - All rights reserved
+
+---
+
+*Built with ❤️ in memory of Omer*

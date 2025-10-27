@@ -53,6 +53,15 @@ const Index = () => {
           אנשים, היא ידעה לתת מקום לכול אדם, וכשהיא הביטה בך, ידעת שהיא איתך.
           כדי להנציח את זכרה של עומר הקמנו שתי עמותות.
         </div>
+        <div className="videoWrapper">
+          <iframe
+            src="https://www.youtube.com/embed/yzYYwsnQk5c"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
         <div className="ctas">
           <Link to="/" className="cta butterfly">
             <img

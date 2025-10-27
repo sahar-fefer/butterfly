@@ -1,6 +1,6 @@
 import React, { useState, createContext } from "react";
 import classNames from "classnames";
-import "../styles/styles.css";
+import "../styles/styles.scss";
 import Footer from "./footer/footer";
 import Nav from "./nav/nav";
 import WhatsAppIcon from "../assets/icons/whatsapp.svg";

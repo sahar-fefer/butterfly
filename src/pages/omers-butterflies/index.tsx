@@ -18,6 +18,7 @@ import gallery4 from "../../assets/images/omers-butterflies-gallery4.jpg";
 import gallery5 from "../../assets/images/omers-butterflies-gallery5.jpg";
 import gallery6 from "../../assets/images/omers-butterflies-gallery6.jpg";
 import gallery7 from "../../assets/images/omers-butterflies-gallery7.jpg";
+import { Link } from "gatsby";
 //  markup
 const OmersHouse = () => {
   const images = [
@@ -42,6 +43,15 @@ const OmersHouse = () => {
           אחרי שתעבירו את הצמיד תוכלו תמיד לקבל חדש ולהמשיך...
         </p>
         <GalleryGrid images={images} />
+        <div className="videoWrapper">
+          <iframe
+            src="https://www.youtube.com/embed/bZLltZxxcRA"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
         <p className="text-grid">
           עומר , כמעט בת 21, נסעה אחרי הצבא לטיול הגדול, עם תרמיל על הגב, עם
           הרבה חלומות ותמימות שהכל אפשרי. לפני כשנתיים, בדרך לטרק בנפאל,
@@ -119,7 +129,10 @@ const OmersHouse = () => {
           כמו אפקט הפרפר ותדעו שהתחלתם שרשרת אנושית של מעשים טובים. אחרי שתעבירו
           את הצמיד תוכלו תמיד לקבל חדש ולהמשיך...
         </p>
-        <button className={`${s.readMore} red-clickable`}>להמשך קריאה</button>
+        {/* <button className={`${s.readMore} red-clickable`}>להמשך קריאה</button> */}
+        <Link className={`${s.readMore} red-clickable`} to="/bracelets">
+          להמשך קריאה
+        </Link>
         <BraceletsAreasBanner />
       </div>
     </Layout>

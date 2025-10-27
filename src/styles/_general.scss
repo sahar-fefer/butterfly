@@ -257,3 +257,20 @@ p {
     }
   }
 }
+
+.videoWrapper {
+  padding: 0 var(--side-space);
+  height: 300px;
+  max-width: 1190px;
+  margin: 56px auto;
+  box-sizing: content-box;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include tablet-l() {
+    height: 500px;
+  }
+}

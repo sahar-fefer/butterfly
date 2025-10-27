@@ -1,0 +1,68 @@
+description: Project-specific rules for the butterfly project.
+globs:
+
+- "\*_/_.js"
+- "\*_/_.jsx"
+- "\*_/_.ts"
+- "\*_/_.tsx"
+- "\*_/_.scss"
+
+---
+
+# Butterfly Project Guidelines
+
+## Component Structure
+
+- Components should be organized in `src/components/` by feature or type.
+- Each component should have its own directory containing the component file (e.g., `Button.tsx`), its SCSS module (e.g., `_button.module.scss`), and potentially a test file.
+
+## Styling
+
+- Use SCSS modules for component-specific styling (`.module.scss`).
+- Global styles should be defined in `src/styles/`.
+- Variables and mixins should be defined in `src/styles/_variables.scss` and `src/styles/_mixins.scss` respectively.
+
+## Image and Asset Management
+
+- All images should be stored in `src/assets/images/`.
+- All icons should be stored in `src/assets/icons/`.
+- Use the `next/image` component for optimized image loading when appropriate.
+
+## Data Fetching
+
+- Prefer server-side rendering (SSR) or static site generation (SSG) with Next.js data fetching methods (`getStaticProps`, `getServerSideProps`).
+- Client-side data fetching should use `SWR` or `React Query` for caching and state management.
+
+## Accessibility
+
+- Ensure all interactive elements have appropriate ARIA attributes.
+- Provide `alt` text for all images.
+- Keyboard navigation should be fully functional.
+
+## Performance
+
+- Optimize image sizes and formats.
+- Implement lazy loading for offscreen images and components.
+- Minimize bundle size by code splitting.
+
+## Internationalization
+
+- Use a consistent internationalization library (e.g., `next-i18next`) for all user-facing text.
+- Store translations in dedicated JSON files.
+
+## Naming Conventions
+
+- React components should use PascalCase (e.g., `MyComponent.tsx`).
+- SCSS module files should use kebab-case with a leading underscore (e.g., `_my-component.module.scss`).
+- Variables and functions in JavaScript/TypeScript should use camelCase.
+
+## Error Handling
+
+- Implement robust error boundaries for React components.
+- Log errors to a centralized service.
+- Provide user-friendly error messages.
+
+## Environment Variables
+
+- Manage sensitive information using environment variables (`.env.local`).
+- Access environment variables through `process.env.VAR_NAME` (for client-side, prefix with `NEXT_PUBLIC_`).

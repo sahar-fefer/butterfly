@@ -389,6 +389,23 @@ p.center {
   }
 }
 
+.videoWrapper {
+  padding: 0 var(--side-space);
+  height: 300px;
+  max-width: 1190px;
+  margin: 56px auto;
+  box-sizing: content-box;
+}
+.videoWrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 1280px) {
+  .videoWrapper {
+    height: 500px;
+  }
+}
+
 :root {
   --opacity-red: rgba(255, 18, 28, 0.9);
   --opacity-white: rgba(255, 255, 255, 0.9);
